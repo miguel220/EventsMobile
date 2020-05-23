@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3700B3</color>
+    <color name="colorSecundary">#ffffff</color>
+    <color name="colorhint">#C0C0C0</color>
+    <color name="transparente">#70000000</color>
+    <color name="BorderButton">#191970</color>
+
+</resources>
