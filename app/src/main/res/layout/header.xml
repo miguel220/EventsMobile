@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:background="@drawable/backgroundclean"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/tvEvents"
+        android:layout_gravity="center"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+
+        android:src="@drawable/logowhite"/>
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/profile_white_icon"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gabriel Brito"
+        android:textSize="24dp"
+        android:textColor="@color/colorSecundary"/>
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gfbritto@teste.com"
+        android:textSize="24dp"
+        android:textColor="@color/colorSecundary"/>
+</LinearLayout>
