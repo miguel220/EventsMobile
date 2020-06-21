@@ -6,26 +6,25 @@
             android:icon="@drawable/event_icon"
             android:title="Ver Eventos" />
     </group>
-    <group android:checkableBehavior="single">
-        <item android:title="Perfil">
-            <menu>
-                <item
-                    android:id="@+id/nav_profile"
-                    android:icon="@drawable/profile_icon"
-                    android:title="Conta" />
-                <item
+
+    <item android:title="Perfil">
+        <menu>
+            <group android:checkableBehavior="single">
+                                <item
                     android:id="@+id/nav_config"
                     android:icon="@drawable/settings_icon"
                     android:title="Configurações" />
-            </menu>
-        </item>
+            </group>
+        </menu>
+    </item>
 
 
-    </group>
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_exit"
-            android:icon="@drawable/exit_icon"
-            android:title="Sair do app" />
-    </group>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_deslog"
+                    android:icon="@drawable/exit_icon"
+                    android:title="Deslogar" />
+            </group>
+
 </menu>
