@@ -4,12 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -21,7 +23,7 @@ public class homeEvents extends AppCompatActivity implements NavigationView.OnNa
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-
+    CardView cardview1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +33,8 @@ public class homeEvents extends AppCompatActivity implements NavigationView.OnNa
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+        cardview1= findViewById(R.id.cardview1); // creating a CardView and assigning a value.
+
 
         //toolbar
         setSupportActionBar(toolbar);
@@ -41,8 +45,15 @@ public class homeEvents extends AppCompatActivity implements NavigationView.OnNa
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
         navigationView.setCheckedItem(R.id.nav_event);
+
+        cardview1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent telaSelecionado = new Intent( getApplicationContext(),SelectedEvent.class);
+                startActivity(telaSelecionado);
+            }
+        });
     }
 
     @Override
@@ -65,8 +76,12 @@ public class homeEvents extends AppCompatActivity implements NavigationView.OnNa
             case R.id.nav_config:
                 Intent intent = new Intent(homeEvents.this,Config.class);
                 startActivity(intent);
+                
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
 }

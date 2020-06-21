@@ -1,42 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".SelectedEvent"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:context=".SelectedEvent"
     tools:openDrawer="start">
 
-<!--    <com.google.android.material.navigation.NavigationView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:id="@+id/nav_view"-->
-<!--        app:headerLayout="@layout/header"-->
-<!--        app:menu="@menu/main_menu"-->
-<!--        android:layout_gravity="start"/>-->
-<!--    <ScrollView-->
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        android:layout_gravity="start"/>
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF">
+        android:background="@drawable/backgroundcool"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00008577"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/menu2_icon" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/tvEventName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="60dp"
             android:layout_marginEnd="32dp"
             android:text="Nome Evento"
+            android:textColor="@color/colorSecundary"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-<!--    </ScrollView>-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvTipe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="100dp"
+            android:text="Tipo:"
+            android:textColor="@color/colorSecundary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEventName" />
+
+        <TextView
+            android:id="@+id/tvTipoEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="105dp"
+            android:text="Palestra"
+            android:textColor="@color/colorSecundary"
+            app:layout_constraintStart_toEndOf="@+id/tvTipe"
+            app:layout_constraintTop_toBottomOf="@+id/tvEventName" />
+
+        <TextView
+            android:id="@+id/tvLocEvent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:text="Local:"
+            android:textColor="@color/colorSecundary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTipe" />
+
+        <TextView
+            android:id="@+id/tvLocalEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="48dp"
+            android:text="Sala 12"
+            android:textColor="@color/colorSecundary"
+            app:layout_constraintStart_toEndOf="@+id/tvLocEvent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTipoEvent" />
+
+        <TextView
+            android:id="@+id/tvDateEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:text="Data:"
+            android:textColor="@color/colorSecundary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocEvent" />
+
+        <TextView
+            android:id="@+id/tvDataEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="48dp"
+            android:text="18/12/2020"
+            android:textColor="@color/colorSecundary"
+            app:layout_constraintStart_toEndOf="@+id/tvDateEvent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocalEvent" />
+
+        <TextView
+            android:id="@+id/tvHR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:text="Horário:"
+            android:textColor="@color/colorSecundary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateEvent" />
+
+        <TextView
+            android:id="@+id/tvHorario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="48dp"
+            android:text="18:00"
+            android:textColor="@color/colorSecundary"
+            app:layout_constraintStart_toEndOf="@+id/tvHR"
+            app:layout_constraintTop_toBottomOf="@+id/tvDataEvento" />
+
+        <TextView
+            android:id="@+id/tvRespons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:text="Responsável:"
+            android:textColor="@color/colorSecundary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHR" />
+
+        <TextView
+            android:id="@+id/tvResponsavel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="48dp"
+            android:text="Gabriel Brito"
+            android:textColor="@color/colorSecundary"
+            app:layout_constraintStart_toEndOf="@+id/tvRespons"
+            app:layout_constraintTop_toBottomOf="@+id/tvHorario" />
+
+        <Button
+            android:id="@+id/btnLerCodigo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="150dp"
+            android:background="@drawable/botao_customisado"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="10dp"
+            android:text="Ler código do Evento"
+            android:textColor="@color/colorSecundary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRespons" />
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/botao_customisado"
+            android:text="Voltar"
+            android:textColor="@color/colorSecundary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="32dp"
+            android:text="Informações sobre o Evento"
+            android:textColor="@color/colorSecundary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEventName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
