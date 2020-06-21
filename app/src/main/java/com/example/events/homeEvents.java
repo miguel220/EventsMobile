@@ -18,7 +18,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 public class homeEvents extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-//teste
+//testea
     //variables
     DrawerLayout drawerLayout;
     NavigationView navigationView;
