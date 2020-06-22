@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReadCode">
+    android:background="@color/colorhint"
+    android:gravity="center">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:layout_above="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <View
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/rectangle"/>
+    </FrameLayout>
+    <LinearLayout
+        android:padding="20dp"
+        android:id="@+id/info"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ler Qr code"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+<TextView
+    android:id="@+id/code_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="10dp"
+    android:text="Aponte para o QR"
+    android:textColor="@color/colorSecundary"
+    android:textSize="20sp"/>
+        <ToggleButton
+            android:id="@+id/btn_enable_disable"
+            android:textOff="Parar"
+            android:textOn="Começar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>
