@@ -94,7 +94,7 @@
         android:background="@drawable/botao_customisado"
         android:fontFamily="casual"
         android:text="Voltar"
-        android:textColor="@color/colorSecundary"
+        android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

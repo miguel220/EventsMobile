@@ -3,9 +3,11 @@ package com.example.events;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.SurfaceView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -21,7 +23,7 @@ import github.nisrulz.qreader.QRDataListener;
 import github.nisrulz.qreader.QREader;
 
 public class ReadCode extends AppCompatActivity {
-
+    Button btnValidar;
     private TextView txt_result;
     private SurfaceView surfaceView;
     private QREader qrEader;
@@ -31,6 +33,15 @@ public class ReadCode extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read_code);
 
+        //buttons
+        btnValidar = findViewById(R.id.btnValidar);
+        btnValidar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent telaValidacao = new Intent(getApplicationContext(),ValidacaoScreen.class);
+                startActivity(telaValidacao);
+            }
+        });
         //Request Permission
         Dexter.withActivity(this)
                 .withPermission(Manifest.permission.CAMERA)
