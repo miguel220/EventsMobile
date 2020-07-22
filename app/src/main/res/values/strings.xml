@@ -2,6 +2,10 @@
     <string name="app_name">Events</string>
     <string name="entrar">Entrar</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>"
-    <string name="navigation_drawer_close">Close navigation drawer</string>"
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="events">events</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="voltar">Voltar</string>"
 
 </resources>
