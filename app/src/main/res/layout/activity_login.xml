@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/common_google_signin_btn_text_dark_default"
-    tools:context=".Login">
+    tools:context="ui.activity.LoginActivity">
 
     <TextView
         android:id="@+id/mainTitle2"
@@ -15,7 +15,7 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/naturebeauty"
-        android:text="@string/events"
+        android:text="@string/Events"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="64sp"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnEntrarLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtSenha" />
 
     <EditText
-        android:id="@+id/edtLogin"
+        android:id="@+id/edtEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -57,13 +57,15 @@
         android:ems="10"
         android:fontFamily="@font/cabin"
         android:hint="@string/email"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:textColor="@android:color/black"
         android:textColorHint="@color/textMuted"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainTitle2" />
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle2"
+        tools:ignore="TextFields"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/edtSenha"
@@ -82,7 +84,8 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btnVoltar"

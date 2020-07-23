@@ -1,4 +1,4 @@
-package com.example.events;
+package ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.example.events.R;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
@@ -22,7 +23,7 @@ import com.karumi.dexter.listener.single.PermissionListener;
 import github.nisrulz.qreader.QRDataListener;
 import github.nisrulz.qreader.QREader;
 
-public class ReadCode extends AppCompatActivity {
+public class QrCodeActivity extends AppCompatActivity {
     Button btnValidar;
     private TextView txt_result;
     private SurfaceView surfaceView;
@@ -31,14 +32,14 @@ public class ReadCode extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_read_code);
+        setContentView(R.layout.activity_qr_code);
 
         //buttons
         btnValidar = findViewById(R.id.btnValidar);
         btnValidar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent telaValidacao = new Intent(getApplicationContext(),ValidacaoScreen.class);
+                Intent telaValidacao = new Intent(getApplicationContext(), ValidacaoScreenActivity.class);
                 startActivity(telaValidacao);
             }
         });
@@ -53,7 +54,7 @@ public class ReadCode extends AppCompatActivity {
 
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse response) {
-                        Toast.makeText(ReadCode.this, "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(QrCodeActivity.this, "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -114,7 +115,7 @@ public class ReadCode extends AppCompatActivity {
 
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse response) {
-                        Toast.makeText(ReadCode.this, "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(QrCodeActivity.this, "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -138,7 +139,7 @@ public class ReadCode extends AppCompatActivity {
 
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse response) {
-                        Toast.makeText(ReadCode.this, "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(QrCodeActivity.this, "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override

@@ -13,20 +13,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ValidacaoScreen"></activity>
-        <activity android:name=".ReadCode" />
-        <activity android:name=".Config" />
-        <activity android:name=".SelectedEvent" />
-        <activity android:name=".homeEvents" />
-        <activity android:name=".Splash">
+        <activity android:name="ui.activity.ValidacaoScreenActivity" />
+        <activity android:name="ui.activity.QrCodeActivity" />
+        <activity android:name="ui.activity.ConfiguracaoActivity" />
+        <activity android:name="ui.activity.SelectedEventActivity" />
+        <activity android:name="ui.activity.homeEventsActivity" />
+        <activity android:name="ui.activity.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login" />
-        <activity android:name=".MainActivity" />
+        <activity android:name="ui.activity.LoginActivity" />
+        <activity android:name="ui.activity.TelaInicialActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

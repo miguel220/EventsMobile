@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ValidacaoScreen"
+    tools:context="ui.activity.ValidacaoScreenActivity"
     android:background="@drawable/backgroundclean"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
@@ -23,7 +23,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="55dp"
-        android:text="Nome:"
+        android:text="@string/nome"
 
         android:textColor="#FFFFFF"
         android:textColorHighlight="@color/colorPrimary"
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="55dp"
-        android:text="Gabriel Brito"
+        android:text="@string/gabriel_brito"
         android:textColor="#FFFFFF"
         android:textColorHighlight="@color/colorPrimary"
         android:textSize="18sp"
@@ -84,7 +84,7 @@
         android:layout_marginTop="32dp"
         android:textColor="#FFFFFF"
         android:textColorHighlight="@color/colorPrimary"
-        android:text="Tipo do inscrito:"
+        android:text="@string/tipo_do_inscrito"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
@@ -97,7 +97,7 @@
         android:layout_marginTop="32dp"
         android:textColor="#FFFFFF"
         android:textColorHighlight="@color/colorPrimary"
-        android:text="Aluno"
+        android:text="@string/aluno"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/textView13"
         app:layout_constraintTop_toBottomOf="@+id/tvInscrito" />
@@ -110,7 +110,7 @@
         android:layout_marginTop="32dp"
         android:textColor="#FFFFFF"
         android:textColorHighlight="@color/colorPrimary"
-        android:text="Documento:"
+        android:text="@string/documento"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
@@ -121,7 +121,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="11.111.111-1"
+        android:text="@string/_11_111_111_1"
         android:textColor="#FFFFFF"
         android:textColorHighlight="@color/colorPrimary"
         android:textSize="18sp"
@@ -135,7 +135,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="51dp"
         android:layout_marginEnd="32dp"
-        android:text="Presença confirmada!!!"
+        android:text="@string/presen_a_confirmada"
         android:textAlignment="center"
         android:textColor="#4CAF50"
         android:textSize="30sp"
@@ -154,7 +154,7 @@
         android:background="@drawable/botao_customisado_light"
         android:backgroundTint="@color/colorSecundary"
         android:padding="10dp"
-        android:text="Ler outro código"
+        android:text="@string/ler_outro_c_digo"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

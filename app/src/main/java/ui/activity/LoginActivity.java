@@ -1,4 +1,4 @@
-package com.example.events;
+package ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,25 +8,27 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Login extends AppCompatActivity {
+import com.example.events.R;
 
-    Button btnVoltar,btnLogin;
-    EditText edtLogin, edtSenha;
+public class LoginActivity extends AppCompatActivity {
+
+    Button btnVoltar, btnEntrarLogin;
+    EditText edtEmail, edtSenha;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
 
-        btnLogin=findViewById(R.id.btnLogin);
+        btnEntrarLogin =findViewById(R.id.btnEntrarLogin);
         btnVoltar=findViewById(R.id.btnVoltar);
-        edtLogin=findViewById(R.id.edtLogin);
+        edtEmail =findViewById(R.id.edtEmail);
         edtSenha=findViewById(R.id.edtSenha);
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        btnEntrarLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent telahome = new Intent(getApplicationContext(), homeEvents.class);
+                Intent telahome = new Intent(getApplicationContext(), homeEventsActivity.class);
                 startActivity(telahome);
             }
         });

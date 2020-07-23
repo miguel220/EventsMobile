@@ -1,4 +1,4 @@
-package com.example.events;
+package ui.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -13,33 +13,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.events.R;
 import com.google.android.material.navigation.NavigationView;
 
-public class ValidacaoScreen extends AppCompatActivity {
-
-    //variables
+public class SelectedEventActivity extends AppCompatActivity {
+    Button btnVoltar, btnLerCodigo;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    Button btnLerOutroCodigo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_validacao_screen);
-
-        btnLerOutroCodigo = findViewById(R.id.btnLerOutroCodigo);
-        btnLerOutroCodigo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        setContentView(R.layout.activity_selected_event);
 
         //hooks
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
-
 
         //toolbar
         setSupportActionBar(toolbar);
@@ -52,8 +42,26 @@ public class ValidacaoScreen extends AppCompatActivity {
         //navigationView.setNavigationItemSelectedListener();
         navigationView.setCheckedItem(R.id.nav_event);
 
-    }
+        //botões
+        btnVoltar=findViewById(R.id.btnVoltar);
+        btnLerCodigo=findViewById(R.id.btnLerCodigo);
 
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        btnLerCodigo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent telaQrCode= new Intent(getApplicationContext(), QrCodeActivity.class);
+                startActivity(telaQrCode);
+            }
+        });
+
+
+    }
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -68,15 +76,11 @@ public class ValidacaoScreen extends AppCompatActivity {
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
         switch (menuItem.getItemId()){
-            case R.id.nav_view:
-               break;
+//            case R.id.nav_event:
+//                break;
             case R.id.nav_config:
-                Intent telaconfig = new Intent(getApplicationContext(), Config.class);
-                startActivity(telaconfig);
-                break;
-                case R.id.nav_event:
-                Intent telaHome = new Intent(getApplicationContext(), homeEvents.class);
-                startActivity(telaHome);
+                Intent intent = new Intent(SelectedEventActivity.this, ConfiguracaoActivity.class);
+                startActivity(intent);
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

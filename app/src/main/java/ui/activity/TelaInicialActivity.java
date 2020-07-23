@@ -1,4 +1,4 @@
-package com.example.events;
+package ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.events.R;
+
+public class TelaInicialActivity extends AppCompatActivity {
 
     Button btnTelaCadastro, btnTelaLogin;
 
@@ -15,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_tela_inicial);
 
 
         btnTelaLogin = findViewById(R.id.btnTelaEntrar);
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         btnTelaLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent telalogin = new Intent(getApplicationContext(), Login.class);
+                Intent telalogin = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(telalogin);
             }
         });

@@ -3,9 +3,18 @@
     <string name="entrar">Entrar</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>"
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="events">events</string>
+    <string name="Events">events</string>
     <string name="email">Email</string>
     <string name="senha">Senha</string>
-    <string name="voltar">Voltar</string>"
+    <string name="voltar">Voltar</string>
+    <string name="nome">Nome:</string>
+    <string name="tipo_do_inscrito">Tipo do inscrito:</string>
+    <string name="aluno">Aluno</string>
+    <string name="documento">Documento:</string>
+    <string name="_11_111_111_1">11.111.111-1</string>
+    <string name="presen_a_confirmada">Presença confirmada!!!</string>
+    <string name="ler_outro_c_digo">Ler outro código</string>
+    <string name="gabriel_brito">Gabriel Brito</string>
+    <string name="bem_vindo_de_volta_administrador">Bem-vindo de volta, Administrador</string>"
 
 </resources>

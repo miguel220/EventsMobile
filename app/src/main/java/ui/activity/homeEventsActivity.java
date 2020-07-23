@@ -1,4 +1,4 @@
-package com.example.events;
+package ui.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -12,24 +12,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
+import com.example.events.R;
 import com.google.android.material.navigation.NavigationView;
 
-public class SelectedEvent extends AppCompatActivity {
-    Button btnVoltar, btnLerCodigo;
+public class homeEventsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    //variables
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    CardView cardview1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selected_event);
+        setContentView(R.layout.activity_home_events);
 
         //hooks
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+        cardview1= findViewById(R.id.cardview1); // creating a CardView and assigning a value.
+
 
         //toolbar
         setSupportActionBar(toolbar);
@@ -39,29 +43,18 @@ public class SelectedEvent extends AppCompatActivity {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        //navigationView.setNavigationItemSelectedListener();
+        navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_event);
 
-        //botões
-        btnVoltar=findViewById(R.id.btnVoltar);
-        btnLerCodigo=findViewById(R.id.btnLerCodigo);
-
-        btnVoltar.setOnClickListener(new View.OnClickListener() {
+        cardview1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent telaSelecionado = new Intent( getApplicationContext(), SelectedEventActivity.class);
+                startActivity(telaSelecionado);
             }
         });
-        btnLerCodigo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaQrCode= new Intent(getApplicationContext(),ReadCode.class);
-                startActivity(telaQrCode);
-            }
-        });
-
-
     }
+
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -73,16 +66,21 @@ public class SelectedEvent extends AppCompatActivity {
     }
 
 
+    @ Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
         switch (menuItem.getItemId()){
-//            case R.id.nav_event:
-//                break;
+            case R.id.nav_event:
+                break;
             case R.id.nav_config:
-                Intent intent = new Intent(SelectedEvent.this, Config.class);
+                Intent intent = new Intent(homeEventsActivity.this, ConfiguracaoActivity.class);
                 startActivity(intent);
+                
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
 }
