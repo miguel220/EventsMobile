@@ -15,6 +15,17 @@
     <string name="presen_a_confirmada">Presença confirmada!!!</string>
     <string name="ler_outro_c_digo">Ler outro código</string>
     <string name="gabriel_brito">Gabriel Brito</string>
-    <string name="bem_vindo_de_volta_administrador">Bem-vindo de volta, Administrador</string>"
+    <string name="bem_vindo_de_volta_administrador">Bem-vindo de volta, Administrador</string>
+    <string name="eventos">Eventos</string>
+    <string name="veja_aqui_todos_os_eventos_dispon_veis">Veja aqui todos os eventos disponíveis</string>
+    <string name="todo">TODO</string>
+    <string name="evento_1">Evento 1</string>
+    <string name="tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes">Tcc sobre o sistema de eventos do itb belval destinado a estudantes</string>
+    <string name="_20_12_2020">20/12/2020</string>
+    <string name="_08_00_10_00">08:00 - 10:00</string>
+    <string name="evento_2">Evento 2</string>
+    <string name="evento_3">Evento 3</string>
+    <string name="evento_4">Evento 4</string>
+    "
 
 </resources>

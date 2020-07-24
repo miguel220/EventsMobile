@@ -24,9 +24,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#FFFFFF">
-//teste
+
+<!--//teste-->
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
-            android:text="Eventos"
+            android:text="@string/eventos"
             android:textSize="30sp"
             app:fontFamily="@font/cabin"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -59,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:fontFamily="@font/cabin"
-            android:text="Veja aqui todos os eventos disponíveis"
+            android:text="@string/veja_aqui_todos_os_eventos_dispon_veis"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -69,8 +70,7 @@
             android:layout_width="0dp"
             android:layout_height="160dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:contentDescription="TODO"
+            android:contentDescription="@string/todo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/toolbar"
@@ -99,15 +99,14 @@
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15px"
-                    android:layout_marginTop="15px"
-                    android:layout_marginRight="15px"
-                    android:layout_marginBottom="15px"
-                    app:srcCompat="@drawable/undraw_partying" />
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/undraw_partying"
+                    android:contentDescription="@string/todo" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    tools:ignore="UselessLeaf">
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -130,9 +129,9 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:maxLength="22"
-                        android:text="Evento 1"
+                        android:text="@string/evento_1"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="40px" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/tvdescript1"
@@ -146,7 +145,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="Tcc sobre o sistema de eventos do itb belval destinado a estudantes" />
+                        android:text="@string/tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes" />
 
                     <TextView
                         android:id="@+id/tvdata1"
@@ -155,9 +154,9 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginRight="20px"
                         android:layout_marginBottom="8dp"
-                        android:text="20/12/2020" />
+                        android:text="@string/_20_12_2020"
+                        tools:ignore="RelativeOverlap" />
 
                     <TextView
                         android:id="@+id/tvhora1"
@@ -166,9 +165,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="08:00 - 10:00" />
+                        android:text="@string/_08_00_10_00" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -198,17 +196,11 @@
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15px"
-                    android:layout_marginTop="15px"
-                    android:layout_marginRight="15px"
-                    android:layout_marginBottom="15px"
-                    app:srcCompat="@drawable/undraw_partying" />
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/undraw_partying"
+                    android:contentDescription="@string/todo"
+                    tools:ignore="ContentDescription" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -228,9 +220,9 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:maxLength="22"
-                        android:text="Evento 2"
+                        android:text="@string/evento_2"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="40px" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/textView7"
@@ -244,7 +236,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="Tcc sobre o sistema de eventos do itb belval destinado a estudantes" />
+                        android:text="@string/tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes" />
 
                     <TextView
                         android:id="@+id/textView8"
@@ -253,9 +245,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginRight="20px"
                         android:layout_marginBottom="8dp"
-                        android:text="20/12/2020" />
+                        android:text="@string/_20_12_2020" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -264,9 +255,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="08:00 - 10:00" />
+                        android:text="@string/_08_00_10_00" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -296,17 +286,9 @@
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15px"
-                    android:layout_marginTop="15px"
-                    android:layout_marginRight="15px"
-                    android:layout_marginBottom="15px"
+                    android:layout_margin="5dp"
                     app:srcCompat="@drawable/undraw_partying" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -326,9 +308,9 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:maxLength="22"
-                        android:text="Evento 3"
+                        android:text="@string/evento_3"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="40px" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/tvDescript3"
@@ -342,7 +324,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="Tcc sobre o sistema de eventos do itb belval destinado a estudantes" />
+                        android:text="@string/tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes" />
 
                     <TextView
                         android:id="@+id/tvData3"
@@ -351,9 +333,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginRight="20px"
                         android:layout_marginBottom="8dp"
-                        android:text="20/12/2020" />
+                        android:text="@string/_20_12_2020" />
 
                     <TextView
                         android:id="@+id/tvHora2"
@@ -362,9 +343,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="08:00 - 10:00" />
+                        android:text="@string/_08_00_10_00" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -394,17 +374,9 @@
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="15px"
-                    android:layout_marginTop="15px"
-                    android:layout_marginRight="15px"
-                    android:layout_marginBottom="15px"
+                    android:layout_margin="5dp"
                     app:srcCompat="@drawable/undraw_partying" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -424,9 +396,9 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:maxLength="22"
-                        android:text="Evento 4"
+                        android:text="@string/evento_4"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="40px" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/tvDescript4"
@@ -440,7 +412,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="Tcc sobre o sistema de eventos do itb belval destinado a estudantes" />
+                        android:text="@string/tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes" />
 
                     <TextView
                         android:id="@+id/tvData4"
@@ -449,9 +421,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginRight="20px"
                         android:layout_marginBottom="8dp"
-                        android:text="20/12/2020" />
+                        android:text="@string/_20_12_2020" />
 
                     <TextView
                         android:id="@+id/tvHora4"
@@ -460,9 +431,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="08:00 - 10:00" />
+                        android:text="@string/_08_00_10_00" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
