@@ -50,9 +50,34 @@ public class ValidacaoScreenActivity extends AppCompatActivity {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        //navigationView.setNavigationItemSelectedListener();
-        navigationView.setCheckedItem(R.id.nav_event);
 
+        navigationView.bringToFront();
+
+        ConfiguracaoDeNavegacao();
+        navigationView.setCheckedItem(R.id.nav_home_events);
+
+    }
+
+    private void ConfiguracaoDeNavegacao() {
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                switch (menuItem.getItemId()){
+                    case R.id.nav_home_events:
+                        startActivity(new Intent(ValidacaoScreenActivity.this, HomeEventsActivity.class));
+                        break;
+                    case R.id.nav_configuracao:
+                        startActivity(new Intent(ValidacaoScreenActivity.this, ConfiguracaoActivity.class));
+                        break;
+                    case R.id.nav_deslog:
+                        startActivity(new Intent(ValidacaoScreenActivity.this, LoginActivity.class));
+                        break;
+                }
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return false;
+            }
+        });
     }
 
     @Override
@@ -63,23 +88,5 @@ public class ValidacaoScreenActivity extends AppCompatActivity {
             super.onBackPressed();
         }
 
-    }
-
-
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-        switch (menuItem.getItemId()){
-            case R.id.nav_view:
-               break;
-            case R.id.nav_config:
-                Intent telaconfig = new Intent(getApplicationContext(), ConfiguracaoActivity.class);
-                startActivity(telaconfig);
-                break;
-                case R.id.nav_event:
-                Intent telaHome = new Intent(getApplicationContext(), homeEventsActivity.class);
-                startActivity(telaHome);
-        }
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
     }
 }

@@ -16,7 +16,7 @@ import android.view.View;
 import com.example.events.R;
 import com.google.android.material.navigation.NavigationView;
 
-public class homeEventsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class HomeEventsActivity extends AppCompatActivity{
 
     //variables
     DrawerLayout drawerLayout;
@@ -43,14 +43,41 @@ public class homeEventsActivity extends AppCompatActivity implements NavigationV
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_event);
+
+        navigationView.bringToFront();
+        
+
+        ConfiguracaoDeNavegacao();
+
+
+        navigationView.setCheckedItem(R.id.nav_home_events);
 
         cardview1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent telaSelecionado = new Intent( getApplicationContext(), SelectedEventActivity.class);
-                startActivity(telaSelecionado);
+                startActivity(new Intent( HomeEventsActivity.this, SelectedEventActivity.class));
+            }
+        });
+    }
+
+    private void ConfiguracaoDeNavegacao() {
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId())
+                {
+                    case R.id.nav_home_events:
+                        break;
+                    case R.id.nav_configuracao:
+                        startActivity(new Intent(HomeEventsActivity.this, ConfiguracaoActivity.class));
+                        break;
+                    case R.id.nav_deslog:
+                        startActivity(new Intent(HomeEventsActivity.this, LoginActivity.class));
+                        break;
+                }
+
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return false;
             }
         });
     }
@@ -64,23 +91,4 @@ public class homeEventsActivity extends AppCompatActivity implements NavigationV
         }
 
     }
-
-
-    @ Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-        switch (menuItem.getItemId()){
-            case R.id.nav_event:
-                break;
-            case R.id.nav_config:
-                Intent intent = new Intent(homeEventsActivity.this, ConfiguracaoActivity.class);
-                startActivity(intent);
-                
-        }
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
-    }
-
-
-
 }

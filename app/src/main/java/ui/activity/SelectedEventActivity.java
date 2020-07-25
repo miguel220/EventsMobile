@@ -39,8 +39,13 @@ public class SelectedEventActivity extends AppCompatActivity {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        //navigationView.setNavigationItemSelectedListener();
-        navigationView.setCheckedItem(R.id.nav_event);
+
+        navigationView.bringToFront();
+
+        ConfiguracaoDeNavegacao();
+
+
+        navigationView.setCheckedItem(R.id.nav_home_events);
 
         //botões
         btnVoltar=findViewById(R.id.btnVoltar);
@@ -55,13 +60,37 @@ public class SelectedEventActivity extends AppCompatActivity {
         btnLerCodigo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent telaQrCode= new Intent(getApplicationContext(), QrCodeActivity.class);
+                Intent telaQrCode= new Intent(SelectedEventActivity.this, QrCodeActivity.class);
                 startActivity(telaQrCode);
             }
         });
 
 
     }
+
+    private void ConfiguracaoDeNavegacao() {
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                switch (menuItem.getItemId()) {
+                    case R.id.nav_home_events:
+                        startActivity(new Intent(SelectedEventActivity.this, HomeEventsActivity.class));
+                        break;
+                    case R.id.nav_configuracao:
+                        startActivity(new Intent(SelectedEventActivity.this, ConfiguracaoActivity.class));
+                        break;
+                    case R.id.nav_deslog:
+                        startActivity(new Intent(SelectedEventActivity.this, LoginActivity.class));
+                        break;
+                }
+
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return false;
+            }
+        });
+    }
+
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -70,19 +99,5 @@ public class SelectedEventActivity extends AppCompatActivity {
             super.onBackPressed();
         }
 
-    }
-
-
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-        switch (menuItem.getItemId()){
-//            case R.id.nav_event:
-//                break;
-            case R.id.nav_config:
-                Intent intent = new Intent(SelectedEventActivity.this, ConfiguracaoActivity.class);
-                startActivity(intent);
-        }
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
     }
 }

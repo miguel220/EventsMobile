@@ -17,7 +17,7 @@
         <activity android:name="ui.activity.QrCodeActivity" />
         <activity android:name="ui.activity.ConfiguracaoActivity" />
         <activity android:name="ui.activity.SelectedEventActivity" />
-        <activity android:name="ui.activity.homeEventsActivity" />
+        <activity android:name="ui.activity.HomeEventsActivity" />
         <activity android:name="ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

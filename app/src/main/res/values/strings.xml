@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Events</string>
     <string name="entrar">Entrar</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>"
@@ -26,6 +26,9 @@
     <string name="evento_2">Evento 2</string>
     <string name="evento_3">Evento 3</string>
     <string name="evento_4">Evento 4</string>
+    <string name="ver_eventos">Ver Eventos</string>
+    <string name="configura_es">Configurações</string>
+    <string name="encerrar_sessão">Deslogar</string>
     "
 
 </resources>
