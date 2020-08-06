@@ -39,8 +39,6 @@ public class LoginActivity extends AppCompatActivity {
         btnEntrarLogin = findViewById(R.id.btnEntrarLogin);
         btnVoltar = findViewById(R.id.btnVoltar);
 
-        configuraBotaoVoltar();
-
         configuraBotaoEntrar();
     }
 
@@ -64,15 +62,6 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "Email/Senha invalidos", Toast.LENGTH_LONG).show();
                 }
-            }
-        });
-    }
-
-    private void configuraBotaoVoltar() {
-        btnVoltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
             }
         });
     }
