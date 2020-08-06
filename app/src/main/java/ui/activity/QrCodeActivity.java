@@ -115,7 +115,7 @@ public class QrCodeActivity extends AppCompatActivity {
 
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse response) {
-                        Toast.makeText(QrCodeActivity.this, "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -139,7 +139,7 @@ public class QrCodeActivity extends AppCompatActivity {
 
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse response) {
-                        Toast.makeText(QrCodeActivity.this, "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override

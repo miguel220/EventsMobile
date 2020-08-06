@@ -29,7 +29,7 @@
                 <item
                     android:id="@+id/nav_deslog"
                     android:icon="@drawable/exit_icon"
-                    android:title="@string/encerrar_sessão" />
+                    android:title="Ecerrar sessão" />
             </group>
 
 </menu>

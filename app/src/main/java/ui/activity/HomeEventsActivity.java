@@ -55,7 +55,7 @@ public class HomeEventsActivity extends AppCompatActivity{
         cardview1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent( HomeEventsActivity.this, SelectedEventActivity.class));
+                startActivity(new Intent( getApplicationContext(), SelectedEventActivity.class));
             }
         });
     }
@@ -69,10 +69,10 @@ public class HomeEventsActivity extends AppCompatActivity{
                     case R.id.nav_home_events:
                         break;
                     case R.id.nav_configuracao:
-                        startActivity(new Intent(HomeEventsActivity.this, ConfiguracaoActivity.class));
+                        startActivity(new Intent(getApplicationContext(), ConfiguracaoActivity.class));
                         break;
                     case R.id.nav_deslog:
-                        startActivity(new Intent(HomeEventsActivity.this, LoginActivity.class));
+                        finish();
                         break;
                 }
 

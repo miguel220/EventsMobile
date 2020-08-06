@@ -1,21 +1,22 @@
 package com.example.events.model;
 
-import android.widget.EditText;
-
 public class Adm3 {
-    private final EditText edtEmail;
-    private final EditText edtSenha;
+    private final String edtEmail;
+    private final String edtSenha;
 
-    public Adm3(EditText edtEmail, EditText edtSenha) {
-        this.edtEmail = edtEmail;
-        this.edtSenha = edtSenha;
+    public Adm3()
+    {
+        this.edtEmail = "miguel@hotmail.com";
+        this.edtSenha = "Miguel@123";
     }
 
-    public EditText getEdtEmail() {
+    public String getEdtEmail()
+    {
         return edtEmail;
     }
 
-    public EditText getEdtSenha() {
+    public String getEdtSenha()
+    {
         return edtSenha;
     }
 }

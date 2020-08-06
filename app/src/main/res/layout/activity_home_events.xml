@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
-            android:text="@string/eventos"
+            android:text="@string/eventos_home_events"
             android:textSize="30sp"
             app:fontFamily="@font/cabin"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:fontFamily="@font/cabin"
-            android:text="@string/veja_aqui_todos_os_eventos_dispon_veis"
+            android:text="@string/veja_aqui_todos_os_eventos_dispon_veis_home_events"
             app:layout_constraintEnd_toStartOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -145,7 +145,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes" />
+                        android:text="@string/tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes_envento1" />
 
                     <TextView
                         android:id="@+id/tvdata1"
@@ -155,7 +155,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="@string/_20_12_2020"
+                        android:text="@string/_20_12_2020_evento1"
                         tools:ignore="RelativeOverlap" />
 
                     <TextView
@@ -236,7 +236,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes" />
+                        android:text="@string/tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes_envento1" />
 
                     <TextView
                         android:id="@+id/textView8"
@@ -246,7 +246,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="@string/_20_12_2020" />
+                        android:text="@string/_20_12_2020_evento1" />
 
                     <TextView
                         android:id="@+id/textView9"
@@ -324,7 +324,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes" />
+                        android:text="@string/tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes_envento1" />
 
                     <TextView
                         android:id="@+id/tvData3"
@@ -334,7 +334,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="@string/_20_12_2020" />
+                        android:text="@string/_20_12_2020_evento1" />
 
                     <TextView
                         android:id="@+id/tvHora2"
@@ -412,7 +412,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        android:text="@string/tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes" />
+                        android:text="@string/tcc_sobre_o_sistema_de_eventos_do_itb_belval_destinado_a_estudantes_envento1" />
 
                     <TextView
                         android:id="@+id/tvData4"
@@ -422,7 +422,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="@string/_20_12_2020" />
+                        android:text="@string/_20_12_2020_evento1" />
 
                     <TextView
                         android:id="@+id/tvHora4"

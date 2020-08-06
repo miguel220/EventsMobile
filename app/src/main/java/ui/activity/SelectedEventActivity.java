@@ -60,7 +60,7 @@ public class SelectedEventActivity extends AppCompatActivity {
         btnLerCodigo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent telaQrCode= new Intent(SelectedEventActivity.this, QrCodeActivity.class);
+                Intent telaQrCode= new Intent(getApplicationContext(), QrCodeActivity.class);
                 startActivity(telaQrCode);
             }
         });
@@ -75,13 +75,13 @@ public class SelectedEventActivity extends AppCompatActivity {
 
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home_events:
-                        startActivity(new Intent(SelectedEventActivity.this, HomeEventsActivity.class));
+                        startActivity(new Intent(getApplicationContext(), HomeEventsActivity.class));
                         break;
                     case R.id.nav_configuracao:
-                        startActivity(new Intent(SelectedEventActivity.this, ConfiguracaoActivity.class));
+                        startActivity(new Intent(getApplicationContext(), ConfiguracaoActivity.class));
                         break;
                     case R.id.nav_deslog:
-                        startActivity(new Intent(SelectedEventActivity.this, LoginActivity.class));
+                        finish();
                         break;
                 }
 
