@@ -11,21 +11,15 @@
         android:id="@+id/btnEntrarLogin"
         android:layout_width="360dp"
         android:layout_height="65dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
         android:background="@drawable/botao_customisado"
-<<<<<<< Updated upstream
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="518dp"
         android:backgroundTint="@color/colorPrimary"
-=======
->>>>>>> Stashed changes
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/cabin"
         android:padding="12dp"
-<<<<<<< Updated upstream
-=======
         android:stateListAnimator="@null"
->>>>>>> Stashed changes
         android:text="@string/entrar"
         android:textAllCaps="false"
         android:textColor="@color/colorSecundary"
@@ -33,8 +27,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="506dp" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <ImageView
         android:id="@+id/imageView7"
