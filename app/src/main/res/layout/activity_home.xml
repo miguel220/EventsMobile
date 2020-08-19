@@ -4,19 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_grey_bkg"
+    android:background="@color/colorPrimary"
     tools:context="ui.activity.Home">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar3"
-        android:layout_width="450dp"
-        android:layout_height="250dp"
-        android:background="@drawable/radius_popup"
-        android:backgroundTint="@color/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-112dp" />
+    <FrameLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:background="@drawable/rounded_border_screen"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="147dp">
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.activity.LogoutPopup"
+    android:background="@drawable/rounded_border_screen">
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deseja se desconectar do Events?"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_btn"
+        android:text="Sim, desconectar"
+        android:textColor="#fff"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:text="Cancelar"
+        android:stateListAnimator="@null"
+        android:textColor="@color/colorPrimary"
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="95dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

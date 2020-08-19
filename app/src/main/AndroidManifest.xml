@@ -13,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Settings"></activity>
+        <activity android:name="ui.activity.SucessValidation"></activity>
+        <activity android:name="ui.activity.ErrorValidation" />
+        <activity android:name="ui.activity.LogoutPopup" />
+        <activity android:name="ui.activity.AdminMenu" />
+        <activity android:name=".Settings" />
         <activity android:name="ui.activity.DigitarQrCode" />
         <activity android:name="ui.activity.WelcomeSplash" />
         <activity android:name="ui.activity.Home" />
