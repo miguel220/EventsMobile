@@ -5,36 +5,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_grey_bkg">
+    android:background="@drawable/gradient_grey_bkg"
+    tools:context="ui.activity.SplashWelcome">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
         android:text="Seja bem-vindo,"
         android:textColor="#4a4a4a"
         android:textSize="28sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="58dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:text="Administrador"
         android:textColor="#303030"
         android:textSize="32sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="104dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="362dp"
         android:layout_height="661dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/powerfulwelcome"
-        tools:layout_editor_absoluteX="24dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <androidx.appcompat.widget.Toolbar

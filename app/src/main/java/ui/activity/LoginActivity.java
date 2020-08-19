@@ -3,6 +3,7 @@ package ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
@@ -55,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, "Succeful login", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(getApplicationContext(), HomeEventsActivity.class);
                         startActivity(intent);
-                    }else {
+                    } else {
                         Toast.makeText(getApplicationContext(), "Senha incorreta", Toast.LENGTH_LONG).show();
                         edtSenha.setError("Coloque uma senha valida");
                     }

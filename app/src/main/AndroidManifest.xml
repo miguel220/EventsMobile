@@ -13,6 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Settings"></activity>
+        <activity android:name="ui.activity.DigitarQrCode" />
+        <activity android:name="ui.activity.WelcomeSplash" />
+        <activity android:name="ui.activity.Home" />
         <activity android:name="ui.activity.ValidacaoScreenActivity" />
         <activity android:name="ui.activity.QrCodeActivity" />
         <activity android:name="ui.activity.ConfiguracaoActivity" />

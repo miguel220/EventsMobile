@@ -7,7 +7,7 @@
     tools:context="ui.activity.HomeEventsActivity"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:openDrawer="">
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
@@ -80,9 +80,9 @@
             android:id="@+id/linearLayout"
             android:layout_width="0dp"
             android:layout_height="175dp"
-            android:background="@drawable/gradientinicio"
+            android:background="#efefef"
             android:orientation="horizontal"
-            android:padding="10dp"
+            android:padding="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

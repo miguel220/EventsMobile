@@ -8,11 +8,12 @@ import android.os.Handler;
 
 import com.example.events.R;
 
-public class SplashActivity extends AppCompatActivity {
-    private final int SPLASH_DISPLAY_LENGTH = 1000;
+public class SplashWelcome extends AppCompatActivity {
+    private final int SPLASH_DISPLAY_LENGTH = 4000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
@@ -21,10 +22,11 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                Intent mainIntent = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(mainIntent);
+                Intent welcome = new Intent(getApplicationContext(), Home.class);
+                startActivity(welcome);
                 finish();
             }
         }, SPLASH_DISPLAY_LENGTH);
+
     }
 }

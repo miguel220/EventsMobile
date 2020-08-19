@@ -1,16 +1,14 @@
-package ui.activity;
+package com.example.events;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.events.R;
-
-public class ConfiguracaoActivity extends AppCompatActivity {
+public class Settings extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_configuracao);
+        setContentView(R.layout.activity_settings);
     }
 }
