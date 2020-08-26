@@ -10,14 +10,14 @@
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="wrap_content"
+        android:layout_width="225dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="134dp"
         android:layout_marginTop="76dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginEnd="52dp"
         android:text="Preferências"
         android:textColor="#fff"
         android:textSize="36sp"
@@ -34,9 +34,7 @@
         android:layout_marginEnd="1dp"
         android:background="@drawable/ic_action_voltar"
         android:stateListAnimator="@null"
-        android:textColor="#fff"
-        android:textSize="36sp"
-        android:textStyle="bold" />
+        android:backgroundTint="#fff"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout"

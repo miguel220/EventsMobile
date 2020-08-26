@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/colorSecundary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorhint</item>
-        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:navigationBarColor">#fff</item>
         <item name="android:statusBarColor">#303030</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
