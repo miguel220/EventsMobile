@@ -33,50 +33,172 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
-        android:background="@drawable/ic_action_voltar" />
+        android:background="@drawable/ic_baseline_menu_adm_24" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="200dp"
-        android:background="@drawable/rounded_border_screen" >
+        android:orientation="vertical"
+        android:weightSum="5"
+        android:background="@drawable/rounded_border_screen">
 
-        <ImageButton
-            android:id="@+id/lerQrCode"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="48dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:gravity="center"
+            android:layout_margin="10dp">
 
-        <ImageButton
-            android:id="@+id/inserirQrCode"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="31dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/lerQrCode"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardElevation="2dp"
+                android:layout_margin="12dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="10dp">
 
-        <ImageButton
-            android:id="@+id/irListaEventos"
-            android:layout_width="352dp"
-            android:layout_height="168dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginBottom="135dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lerQrCode"
-            tools:srcCompat="@tools:sample/avatars" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/btnEventos"
+                    >
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_calendar_today_24" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="EVENTOS"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorSecundary"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/cabin"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardElevation="2dp"
+                android:layout_margin="12dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/btnQrCode">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ic_qrcode"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="QR CODE"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorSecundary"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/cabin"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:padding="16dp"
+
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="12dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/btnPreferencias">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_settings_24" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PREFERENCIAS"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorSecundary"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/cabin"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="12dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/btnSair">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_sign_out_alt" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SAIR"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorSecundary"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/cabin"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

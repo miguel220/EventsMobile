@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1065335211/Events.iml" filepath="$PROJECT_DIR$/.idea/modules/-1065335211/Events.iml" group="Events" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Events-app.iml" filepath="$PROJECT_DIR$/.idea/modules/Events-app.iml" group="Events/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1065335211/EventsMobile-Events.iml" filepath="$PROJECT_DIR$/.idea/modules/-1065335211/EventsMobile-Events.iml" group="Events" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app.iml" group="Events/app" />
     </modules>
   </component>
