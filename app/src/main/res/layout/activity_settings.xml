@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".Settings">
+    tools:context="ui.activity.Settings">
 
 
     <TextView
@@ -20,26 +20,25 @@
         android:layout_marginEnd="52dp"
         android:text="Preferências"
         android:textColor="#fff"
-        android:textSize="36sp"
+        android:textSize="33sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnVoltarHome"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="30dp"
         android:layout_marginTop="75dp"
-        android:layout_marginEnd="1dp"
         android:background="@drawable/ic_action_voltar"
         android:stateListAnimator="@null"
-        android:backgroundTint="#fff"/>
+        android:clickable="true"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout"
-        android:layout_width="413dp"
-        android:layout_height="550dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="200dp"
         android:background="@drawable/rounded_border_screen"
 
@@ -92,11 +91,11 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="60dp"
+            android:fontFamily="@font/cabin"
             android:text="Events - Gestão de Eventos Escolares"
             android:textAlignment="center"
-            android:textSize="20sp"
             android:textColor="#898989"
-            android:fontFamily="@font/cabin"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.567"
