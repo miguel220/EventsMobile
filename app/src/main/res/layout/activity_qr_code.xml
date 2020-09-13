@@ -42,7 +42,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnValidar"
+            android:id="@+id/btnIrParaDigitarQrCode"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:background="@drawable/blue_btn"

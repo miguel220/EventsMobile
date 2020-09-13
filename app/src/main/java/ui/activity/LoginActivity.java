@@ -21,7 +21,7 @@ import static android.view.View.FOCUSABLE_AUTO;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button btnVoltar, btnEntrarLogin;
+    private Button btnEntrarLogin;
     private EditText edtEmail, edtSenha;
 
     String email_correto = "miguel@outlook.com";
@@ -38,9 +38,15 @@ public class LoginActivity extends AppCompatActivity {
 
 
         btnEntrarLogin = findViewById(R.id.btnEntrarLogin);
-        btnVoltar = findViewById(R.id.btnVoltar);
+        btnEntrarLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WelcomeSplash.class);
+                startActivity(intent);
+            }
+        });
 
-        configuraBotaoEntrar();
+        //configuraBotaoEntrar();
     }
 
     private void configuraBotaoEntrar() {
@@ -54,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                 } else if (edtEmail.getText().toString().equals(email_correto)) {
                     if (edtSenha.getText().toString().equals(senha_correta)) {
                         Toast.makeText(LoginActivity.this, "Succeful login", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(), HomeEventsActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), Home.class);
                         startActivity(intent);
                     } else {
                         Toast.makeText(getApplicationContext(), "Senha incorreta", Toast.LENGTH_LONG).show();
