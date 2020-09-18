@@ -21,19 +21,33 @@ public class DigitarQrCode extends AppCompatActivity {
         btnConfirmarQrCode = findViewById(R.id.btnConfirmarQrCode);
         btnVoltarParaQrCode = findViewById(R.id.btnVoltarParaQrCode);
 
+        btnValidaQr();
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        btnVoltarQr();
+    }
+
+    private void btnValidaQr() {
         btnConfirmarQrCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SucessValidation.class); // fazer método para trocar tela
                 startActivity(intent);
+
             }
         });
+    }
 
+    private void btnVoltarQr() {
         btnVoltarParaQrCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Home.class);
-                startActivity(intent);
+                startActivity(new Intent(getApplicationContext(), QrCodeActivity.class));
             }
         });
     }

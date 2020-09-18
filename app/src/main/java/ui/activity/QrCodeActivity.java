@@ -13,6 +13,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.events.R;
+import com.google.zxing.Result;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
@@ -22,11 +23,13 @@ import com.karumi.dexter.listener.single.PermissionListener;
 
 import github.nisrulz.qreader.QRDataListener;
 import github.nisrulz.qreader.QREader;
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class QrCodeActivity extends AppCompatActivity {
-    Button btnIrParaDigitarQrCode, btnVoltar;
-    private TextView txt_result;
-    private SurfaceView surfaceView;
+    private Button btnIrParaDigitarQrCode, btnVoltar;
+
+    private TextView code_info;
+    private SurfaceView camera_view;
     private QREader qrEader;
 
     @Override
@@ -34,89 +37,54 @@ public class QrCodeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_code);
 
-        //buttons
-        btnIrParaDigitarQrCode = findViewById(R.id.btnIrParaDigitarQrCode);
+        Dexter.withActivity(this)
+                .withPermission(Manifest.permission.CAMERA)
+                .withListener(new PermissionListener() {
+                    @Override
+                    public void onPermissionGranted(PermissionGrantedResponse response) {
+                        setupCamera();
+                    }
 
-        // btnValidar = findViewById(R.id.btnValidar);
-        //    btnValidar.setOnClickListener(new View.OnClickListener() {
-        //        @Override
-        //        public void onClick(View v) {
-        //            Intent telaValidacao = new Intent(getApplicationContext(), ValidacaoScreenActivity.class);
-        //            startActivity(telaValidacao);
-        //    }
-        //});
-        //Request Permission
-        //Dexter.withActivity(this)
-        //      .withPermission(Manifest.permission.CAMERA)
-        //      .withListener(new PermissionListener() {
-        //          @Override
-        //          public void onPermissionGranted(PermissionGrantedResponse response) {
-        //              setupCamera();
-        //          }
-        //
-        //          @Override
-        //          public void onPermissionDenied(PermissionDeniedResponse response) {
-        //              Toast.makeText(QrCodeActivity.this, "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
-        //          }
-//
-        //                  @Override
-        ////          public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
+                    @Override
+                    public void onPermissionDenied(PermissionDeniedResponse response) {
+                        Toast.makeText(QrCodeActivity.this,"You must enable this permission", Toast.LENGTH_SHORT).show();
+                    }
 
-        //        }
-        //      }).check();
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
 
-        btnIrParaDigitarQrCode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent irParaDigitarQrCode = new Intent(getApplicationContext(), DigitarQrCode.class);
-                startActivity(irParaDigitarQrCode);
-            }
-        });
+                    }
+                }).check();
 
-        btnVoltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent voltarParaHome = new Intent(getApplicationContext(), Home.class);
-                startActivity(voltarParaHome);
-            }
-        });
+        declaracaoDeBotoes();
+
+        btnDigitarCodigo();
+
+
 
     }
 
-    //private void setupCamera() {
-    //    txt_result = findViewById(R.id.code_info);
-    //    final ToggleButton btn_on_off = findViewById(R.id.btn_enable_disable);
-    //    btn_on_off.setOnClickListener(new View.OnClickListener() {
-    //        @Override
-    //        public void onClick(View v) {
-    //            if (qrEader.isCameraRunning()) {
-    //                btn_on_off.setChecked(false);
-    //                qrEader.stop();
-    //            } else {
-    //                btn_on_off.setChecked(true);
-    //                qrEader.start();
-    //            }
-    //        }
-    //    });
-    //    surfaceView = findViewById(R.id.camera_view);
-    //    setupQREader();
-    //}
+    private void setupCamera() {
+        code_info = (TextView) findViewById(R.id.code_info);
+        camera_view = (SurfaceView) findViewById(R.id.camera_view);
+        setupQREader();
+    }
 
     private void setupQREader() {
-        qrEader = new QREader.Builder(this, surfaceView, new QRDataListener() {
+        qrEader = new QREader.Builder(this, camera_view, new QRDataListener() {
             @Override
             public void onDetected(final String data) {
-                txt_result.post(new Runnable() {
+                code_info.post(new Runnable() {
                     @Override
                     public void run() {
-                        txt_result.setText(data);
+                        code_info.setText(data);
                     }
                 });
             }
         }).facing(QREader.BACK_CAM)
                 .enableAutofocus(true)
-                .height(surfaceView.getHeight())
-                .width(surfaceView.getWidth())
+                .height(code_info.getHeight())
+                .width(code_info.getWidth())
                 .build();
     }
 
@@ -128,13 +96,13 @@ public class QrCodeActivity extends AppCompatActivity {
                 .withListener(new PermissionListener() {
                     @Override
                     public void onPermissionGranted(PermissionGrantedResponse response) {
-                        if(qrEader !=null)
-                            qrEader.initAndStart(surfaceView);
+                        if (qrEader != null)
+                            qrEader.initAndStart(camera_view);
                     }
 
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse response) {
-                        Toast.makeText(getApplicationContext(), "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(QrCodeActivity.this,"You must enable this permission", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -142,6 +110,8 @@ public class QrCodeActivity extends AppCompatActivity {
 
                     }
                 }).check();
+
+        btnVoltarParaAHome();
     }
 
     @Override
@@ -152,13 +122,13 @@ public class QrCodeActivity extends AppCompatActivity {
                 .withListener(new PermissionListener() {
                     @Override
                     public void onPermissionGranted(PermissionGrantedResponse response) {
-                        if(qrEader !=null)
+                        if (qrEader != null)
                             qrEader.releaseAndCleanup();
                     }
 
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse response) {
-                        Toast.makeText(getApplicationContext(), "Você precisa permitir o acesso a câmera", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(QrCodeActivity.this,"You must enable this permission", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -166,6 +136,32 @@ public class QrCodeActivity extends AppCompatActivity {
 
                     }
                 }).check();
-
     }
+
+    private void declaracaoDeBotoes() {
+        btnIrParaDigitarQrCode = findViewById(R.id.btnIrParaDigitarQrCode);
+        btnVoltar = findViewById(R.id.btnVoltar);
+    }
+
+    private void btnDigitarCodigo() {
+        btnIrParaDigitarQrCode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent irParaDigitarQrCode = new Intent(getApplicationContext(), DigitarQrCode.class);
+                startActivity(irParaDigitarQrCode);
+            }
+        });
+    }
+
+    private void btnVoltarParaAHome() {
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
+
+
 }

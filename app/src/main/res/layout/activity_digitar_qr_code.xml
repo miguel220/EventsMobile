@@ -32,7 +32,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:text="#"
+        android:hint="#"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

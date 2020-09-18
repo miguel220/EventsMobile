@@ -61,7 +61,7 @@
             android:textColor="@color/colorPrimary"
             android:background="#fff"
             android:layout_marginBottom="10dp"
-            android:stateListAnimator="@null"/>
+            android:stateListAnimator="@null" />
     </LinearLayout>
 
 </RelativeLayout>
