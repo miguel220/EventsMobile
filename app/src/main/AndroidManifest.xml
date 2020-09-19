@@ -13,23 +13,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="ui.activity.SucessValidation"></activity>
-        <activity android:name="ui.activity.ErrorValidation" />
-        <activity android:name="ui.activity.LogoutPopup" />
-        <activity android:name="ui.activity.Settings" />
-        <activity android:name="ui.activity.DigitarQrCode" />
-        <activity android:name="ui.activity.WelcomeSplash" />
-        <activity android:name="ui.activity.Home" />
-        <activity android:name="ui.activity.QrCodeActivity" />
-        <activity android:name="ui.activity.SplashActivity">
+        android:theme="@style/AppTheme"
+        android:name=".model.EventsApplication">
+        <activity android:name=".model.Activitys.SucessValidation" />
+        <activity android:name=".model.Activitys.ErrorValidation" />
+        <activity android:name=".model.Activitys.LogoutPopup" />
+        <activity android:name=".model.Activitys.Settings" />
+        <activity android:name=".model.Activitys.DigitarQrCode" />
+        <activity android:name=".model.Activitys.WelcomeSplash" />
+        <activity android:name=".model.Activitys.Home" />
+        <activity android:name=".model.Activitys.QrCodeActivity" />
+        <activity android:name=".model.Activitys.SplashActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="ui.activity.LoginActivity" />
+        <activity android:name=".model.Activitys.LoginActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorSecundary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
-        <item name="colorAccent">@color/colorhint</item>
+        <item name="colorAccent">#ec1c24</item>
         <item name="android:navigationBarColor">#fff</item>
         <item name="android:statusBarColor">#303030</item>
         <item name="android:windowLightStatusBar">true</item>

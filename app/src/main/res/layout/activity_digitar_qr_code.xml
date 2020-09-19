@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.activity.DigitarQrCode">
+    tools:context=".model.Activitys.DigitarQrCode">
 
     <TextView
         android:id="@+id/textView17"
@@ -30,7 +30,7 @@
         android:layout_marginEnd="26dp"
         android:background="@drawable/input_theme"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:padding="12dp"
         android:hint="#"
         android:textSize="26sp"

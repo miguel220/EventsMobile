@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="ui.activity.Home"
+    tools:context=".model.Activitys.Home"
     android:id="@+id/relativeLayout">
 
     <ImageView
@@ -48,7 +48,6 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardEventos"
-                android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"

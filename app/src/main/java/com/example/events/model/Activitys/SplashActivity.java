@@ -1,4 +1,4 @@
-package ui.activity;
+package com.example.events.model.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
