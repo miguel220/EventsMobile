@@ -37,7 +37,7 @@ public class Settings extends AppCompatActivity {
         btnNotificacoes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (btnNotificacoes.)
+                Toast.makeText(getApplicationContext(), "Em manutenção", Toast.LENGTH_SHORT).show();
             }
         });
     }
