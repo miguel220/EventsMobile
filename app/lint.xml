@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconDuplicates">
+        <ignore path="src/main/res/mipmap-hdpi/ic_launcher.png" />
+        <ignore path="src/main/res/mipmap-hdpi/ic_launcher_voltar.png" />
+        <ignore path="src/main/res/mipmap-mdpi/ic_launcher.png" />
+        <ignore path="src/main/res/mipmap-mdpi/ic_launcher_voltar.png" />
+        <ignore path="src/main/res/mipmap-xhdpi/ic_launcher.png" />
+        <ignore path="src/main/res/mipmap-xhdpi/ic_launcher_voltar.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_launcher.png" />
+        <ignore path="src/main/res/mipmap-xxhdpi/ic_launcher_voltar.png" />
+        <ignore path="src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
+        <ignore path="src/main/res/mipmap-xxxhdpi/ic_launcher_voltar.png" />
+        <ignore path="src/main/res/mipmap-xxxhdpi/ic_launcher_voltar.png" />
+        <ignore path="src/main/res/mipmap-xxxhdpi/ic_launcher_voltar.png" />
+    </issue>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/eventslogo.png" />
+        <ignore path="src/main/res/drawable/logoblack.png" />
+        <ignore path="src/main/res/drawable/logogray.png" />
+        <ignore path="src/main/res/drawable/logowhite.png" />
+        <ignore path="src/main/res/drawable/negativevalidation.png" />
+        <ignore path="src/main/res/drawable/positivevalidation.png" />
+        <ignore path="src/main/res/drawable/undraw_celebrating.png" />
+        <ignore path="src/main/res/drawable/undraw_partying.png" />
+    </issue>
+    <issue id="IconXmlAndPng">
+        <ignore path="src/main/res/drawable-hdpi/ic_action_voltar.png" />
+        <ignore path="src/main/res/drawable-hdpi/ic_settins_white.png" />
+        <ignore path="src/main/res/drawable-mdpi/ic_action_voltar.png" />
+        <ignore path="src/main/res/drawable-mdpi/ic_settins_white.png" />
+        <ignore path="src/main/res/drawable-xhdpi/ic_action_voltar.png" />
+        <ignore path="src/main/res/drawable-xhdpi/ic_settins_white.png" />
+        <ignore path="src/main/res/drawable-xxhdpi/ic_action_voltar.png" />
+        <ignore path="src/main/res/drawable-xxhdpi/ic_settins_white.png" />
+    </issue>
+</lint>

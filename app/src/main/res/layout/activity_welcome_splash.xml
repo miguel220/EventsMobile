@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="ui.activity.WelcomeSplash">
+    tools:context="com.example.events.model.Activitys.WelcomeSplash">
 
     <TextView
         android:id="@+id/textView15"
@@ -14,7 +14,7 @@
         android:layout_marginStart="144dp"
         android:layout_marginTop="264dp"
         android:layout_marginEnd="144dp"
-        android:text="Bem-vindo"
+        android:text="@string/bem_vindo"
         android:textColor="#fff"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView16"
         android:layout_width="386dp"
         android:layout_height="92dp"
         android:layout_marginStart="115dp"

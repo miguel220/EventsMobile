@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.events">
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -14,10 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".model.EventsApplication">
+        android:name=".model.EventsApplication"
+        tools:ignore="AllowBackup">
         <activity android:name=".model.Activitys.SucessValidation" />
         <activity android:name=".model.Activitys.ErrorValidation" />
-        <activity android:name=".model.Activitys.LogoutPopup" />
         <activity android:name=".model.Activitys.Settings" />
         <activity android:name=".model.Activitys.DigitarQrCode" />
         <activity android:name=".model.Activitys.WelcomeSplash" />

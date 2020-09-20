@@ -2,9 +2,6 @@
 <resources>
     <color name="colorPrimary">#6930ee</color>
     <color name="colorSecundary">#ffffff</color>
-    <color name="textMuted">#9C9898</color>
     <color name="colorhint">#C0C0C0</color>
-    <color name="transparente">#70000000</color>
-    <color name="BorderButton">#191970</color>
 
 </resources>

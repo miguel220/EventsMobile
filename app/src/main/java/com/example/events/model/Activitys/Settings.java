@@ -1,20 +1,19 @@
 package com.example.events.model.Activitys;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.events.R;
 
 public class Settings extends AppCompatActivity {
 
-    private Button btnVoltarHome, btnMEscuro, btnNotificacoes;
+    private Button btnVoltarHome;
+    private Switch  btnMEscuro, btnNotificacoes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +36,9 @@ public class Settings extends AppCompatActivity {
         btnNotificacoes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Em manutenção", Toast.LENGTH_SHORT).show();
+                if(btnNotificacoes.isChecked()){
+                    Toast.makeText(getApplicationContext(), "Em manutenção", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -46,7 +47,9 @@ public class Settings extends AppCompatActivity {
         btnMEscuro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Em manutenção", Toast.LENGTH_LONG).show();
+                if(btnMEscuro.isChecked()){
+                    Toast.makeText(getApplicationContext(), "Em manutenção", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

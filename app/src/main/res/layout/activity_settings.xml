@@ -9,7 +9,6 @@
 
 
     <TextView
-        android:id="@+id/textView21"
         android:layout_width="225dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -18,7 +17,7 @@
         android:layout_marginStart="134dp"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="52dp"
-        android:text="Preferências"
+        android:text="@string/preferencias"
         android:textColor="#fff"
         android:textSize="33sp"
         android:textStyle="bold" />
@@ -36,7 +35,6 @@
         android:clickable="true"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="200dp"
@@ -55,7 +53,7 @@
             android:fontFamily="@font/cabin"
             android:gravity="center"
             android:switchPadding="100dp"
-            android:text="Modo escuro"
+            android:text="@string/modo_escuro"
             android:textColor="#898989"
             android:textSize="28sp"
             android:textStyle="bold"
@@ -77,7 +75,7 @@
             android:fontFamily="@font/cabin"
             android:gravity="center"
             android:switchPadding="30dp"
-            android:text="Ativar notificações"
+            android:text="@string/ativar_notifica_es"
             android:textColor="#898989"
             android:textSize="28sp"
             android:textStyle="bold"
@@ -96,7 +94,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="60dp"
             android:fontFamily="@font/cabin"
-            android:text="Events - Gestão de Eventos Escolares"
+            android:text="@string/events_gest_o_de_eventos_escolares"
             android:textAlignment="center"
             android:textColor="#898989"
             android:textSize="20sp"

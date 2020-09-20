@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_grey_bkg"
-    tools:context=".model.Activitys.LoginActivity">
+    tools:context=".model.Activitys.LoginActivity"
+    tools:ignore="ExtraText">
 
     <Button
         android:id="@+id/btnEntrarLogin"
@@ -43,7 +44,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <LinearLayout
         android:id="@+id/linearLayout5"
@@ -59,7 +61,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_email"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             app:errorEnabled="true">
@@ -70,14 +71,13 @@
                 android:layout_height="75dp"
                 android:layout_marginBottom="0dp"
                 android:background="@drawable/input_theme"
-                android:hint="Seu e-mail"
+                android:hint="@string/seu_e_mail"
                 android:inputType="textEmailAddress"
-                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/text_input_password"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             app:errorEnabled="true"
@@ -88,10 +88,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:background="@drawable/input_theme"
-                android:hint="Sua senha"
+                android:hint="@string/sua_senha"
                 android:inputType="textPassword"
-                android:paddingLeft="15dp"
-                android:textColorHint="#f0f"
+                android:paddingStart="15dp"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
@@ -100,11 +99,10 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="Iniciar sessão"
+        android:text="@string/iniciar_sess_o"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
->>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.activity.SucessValidation">
+    tools:context="com.example.events.model.Activitys.SucessValidation">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -16,7 +16,8 @@
         android:src="@drawable/positivevalidation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/textView5"
@@ -25,7 +26,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="32dp"
-        android:text="PRESENÇA CONFIRMADA"
+        android:text="@string/presen_a_confirmada_done"
         android:textAlignment="center"
         android:textColor="#46AD63"
         android:textSize="36sp"
@@ -104,7 +105,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
-        android:id="@+id/button8"
         android:layout_width="360dp"
         android:layout_height="65dp"
         android:layout_marginStart="25dp"

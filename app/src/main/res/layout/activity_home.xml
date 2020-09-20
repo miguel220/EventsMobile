@@ -5,19 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".model.Activitys.Home"
-    android:id="@+id/relativeLayout">
+    tools:context=".model.Activitys.Home">
 
     <ImageView
-        android:id="@+id/imageView4"
         android:layout_width="140dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        app:srcCompat="@drawable/logowhite" />
+        app:srcCompat="@drawable/logowhite"
+        android:contentDescription="@string/todo" />
 
     <TextView
-        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -36,7 +34,6 @@
         android:background="@drawable/rounded_border_screen">
 
         <GridLayout
-            android:id="@+id/myGrid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2"
@@ -44,7 +41,8 @@
             android:layout_marginTop="30dp"
             android:alignmentMode="alignMargins"
             android:columnOrderPreserved="false"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            tools:ignore="UselessParent">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardEventos"
@@ -62,23 +60,26 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_height="80dp"
                         android:background="@color/colorPrimary"
-                        android:src="@drawable/ic_baseline_calendar_today_24" />
+                        android:src="@drawable/ic_baseline_calendar_today_24"
+                        android:contentDescription="@string/todo"
+                        />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/cabin"
-                        android:text="EVENTOS"
+                        android:text="@string/eventos"
                         android:textAlignment="center"
                         android:textColor="@color/colorSecundary"
                         android:textSize="18sp"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="10dp" />
 
                 </LinearLayout>
 
@@ -100,19 +101,21 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_height="80dp"
                         android:background="@color/colorPrimary"
-                        android:src="@drawable/ic_qrcode" />
+                        android:src="@drawable/ic_qrcode"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/cabin"
-                        android:text="QR CODE"
+                        android:text="@string/qr_code"
                         android:textAlignment="center"
                         android:textColor="@color/colorSecundary"
                         android:textSize="18sp"
@@ -139,19 +142,21 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_height="80dp"
                         android:background="@color/colorPrimary"
-                        android:src="@drawable/ic_sign_out_alt" />
+                        android:src="@drawable/ic_sign_out_alt"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/cabin"
-                        android:text="SAIR"
+                        android:text="@string/sair"
                         android:textAlignment="center"
                         android:textColor="@color/colorSecundary"
                         android:textSize="18sp"
@@ -177,23 +182,25 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:padding="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_height="80dp"
                         android:background="@color/colorPrimary"
-                        android:src="@drawable/ic_baseline_settings_24" />
+                        android:src="@drawable/ic_baseline_settings_24"
+                        android:contentDescription="@string/todo" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/cabin"
-                        android:text="PREFERENCIAS"
+                        android:text="@string/preferencias"
                         android:textAlignment="center"
                         android:textColor="@color/colorSecundary"
                         android:textSize="18sp"
-                        android:layout_marginTop="10dp"/>
+                        android:layout_marginTop="10dp" />
 
                 </LinearLayout>
 
