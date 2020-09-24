@@ -14,9 +14,9 @@
     <string name="o_participante_pode_n_o_estar_cadastrado_neste_evento">O participante pode não estar cadastrado neste evento.</string>
     <string name="ler_outro_qr_code">Ler outro QR Code</string>
     <string name="voltar_ao_in_cio">Voltar ao início</string>
-    <string name="eventos">EVENTOS</string>
-    <string name="qr_code">QR CODE</string>
-    <string name="sair">SAIR</string>
+    <string name="eventos">Eventos</string>
+    <string name="qr_code">Qr Code</string>
+    <string name="sair">Sair</string>
     <string name="seu_e_mail">Seu e-mail</string>
     <string name="sua_senha">Sua senha</string>
     <string name="iniciar_sess_o">Iniciar sessão</string>

@@ -30,7 +30,7 @@
         android:layout_marginEnd="116dp"
         android:layout_marginBottom="387dp"
         android:text="João Silva"
-        android:textAlignment="center"
+        android:gravity="center"
         android:textColor="#fff"
         android:textSize="44sp"
         android:textStyle="bold"

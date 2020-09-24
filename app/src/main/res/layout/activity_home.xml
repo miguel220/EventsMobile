@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".model.Activitys.Home">
+    tools:context="com.example.events.model.Activitys.Home">
 
     <ImageView
         android:layout_width="140dp"
@@ -41,7 +41,7 @@
             android:layout_marginTop="30dp"
             android:alignmentMode="alignMargins"
             android:columnOrderPreserved="false"
-            android:layout_margin="10dp"
+            android:layout_margin="30dp"
             tools:ignore="UselessParent">
 
             <androidx.cardview.widget.CardView
@@ -57,7 +57,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp"
                     android:gravity="center"
@@ -76,7 +76,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/cabin"
                         android:text="@string/eventos"
-                        android:textAlignment="center"
+                        android:gravity="center"
                         android:textColor="@color/colorSecundary"
                         android:textSize="18sp"
                         android:layout_marginTop="10dp" />
@@ -98,7 +98,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp"
                     android:gravity="center"
@@ -116,7 +116,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/cabin"
                         android:text="@string/qr_code"
-                        android:textAlignment="center"
+                        android:gravity="center"
                         android:textColor="@color/colorSecundary"
                         android:textSize="18sp"
                         android:layout_marginTop="10dp"/>
@@ -139,7 +139,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp"
                     android:gravity="center"
@@ -157,7 +157,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/cabin"
                         android:text="@string/sair"
-                        android:textAlignment="center"
+                        android:gravity="center"
                         android:textColor="@color/colorSecundary"
                         android:textSize="18sp"
                         android:layout_marginTop="10dp"/>
@@ -179,7 +179,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp"
                     android:gravity="center"
@@ -197,7 +197,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/cabin"
                         android:text="@string/preferencias"
-                        android:textAlignment="center"
+                        android:gravity="center"
                         android:textColor="@color/colorSecundary"
                         android:textSize="18sp"
                         android:layout_marginTop="10dp" />

@@ -17,14 +17,14 @@
         android:theme="@style/AppTheme"
         android:name=".model.EventsApplication"
         tools:ignore="AllowBackup">
-        <activity android:name=".model.Activitys.SucessValidation" />
-        <activity android:name=".model.Activitys.ErrorValidation" />
-        <activity android:name=".model.Activitys.Settings" />
-        <activity android:name=".model.Activitys.DigitarQrCode" />
-        <activity android:name=".model.Activitys.WelcomeSplash" />
-        <activity android:name=".model.Activitys.Home" />
-        <activity android:name=".model.Activitys.QrCodeActivity" />
-        <activity android:name=".model.Activitys.SplashActivity">
+        <activity android:name="com.example.events.model.Activitys.SucessValidation" />
+        <activity android:name="com.example.events.model.Activitys.ErrorValidation" />
+        <activity android:name="com.example.events.model.Activitys.Settings" />
+        <activity android:name="com.example.events.model.Activitys.DigitarQrCode" />
+        <activity android:name="com.example.events.model.Activitys.WelcomeSplash" />
+        <activity android:name="com.example.events.model.Activitys.Home" />
+        <activity android:name="com.example.events.model.Activitys.QrCodeActivity" />
+        <activity android:name="com.example.events.model.Activitys.SplashActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +32,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".model.Activitys.LoginActivity" />
+        <activity android:name="com.example.events.model.Activitys.LoginActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

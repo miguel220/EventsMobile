@@ -44,7 +44,7 @@
         <Button
             android:id="@+id/btnIrParaDigitarQrCode"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/blue_btn"
             android:text="@string/digitar_qr_code"
             android:textColor="#fff"
@@ -55,11 +55,11 @@
         <Button
             android:id="@+id/btnVoltar"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:text="@string/voltar"
             android:textSize="22sp"
             android:textColor="@color/colorPrimary"
-            android:background="#fff"
+            android:background="#efefef"
             android:layout_marginBottom="10dp"
             android:stateListAnimator="@null" />
     </LinearLayout>
