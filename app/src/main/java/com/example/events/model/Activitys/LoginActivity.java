@@ -35,8 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         btnEntrarLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), WelcomeSplash.class);
-                startActivity(intent);
+                startActivity(new Intent(getApplicationContext(), WelcomeSplash.class));
             }
         });
 
@@ -54,8 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                 } else if (edtEmail.getText().toString().equals(email_correto)) {
                     if (edtSenha.getText().toString().equals(senha_correta)) {
                         Toast.makeText(LoginActivity.this, "Succeful login", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(), Home.class);
-                        startActivity(intent);
+                        startActivity(new Intent(getApplicationContext(), Home.class));
                     } else {
                         Toast.makeText(getApplicationContext(), "Senha incorreta", Toast.LENGTH_LONG).show();
                         edtSenha.setError("Coloque uma senha valida");

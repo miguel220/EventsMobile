@@ -51,7 +51,7 @@ public class DigitarQrCode extends AppCompatActivity {
         btnVoltarParaQrCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), QrCodeActivity.class));
+                startActivity(new Intent(getApplicationContext(), Home.class));
             }
         });
     }

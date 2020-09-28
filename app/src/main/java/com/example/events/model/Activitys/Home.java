@@ -69,7 +69,7 @@ public class Home extends AppCompatActivity {
                         .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                finish();
+                                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                             }
                         })
                         .setNegativeButton("Não", null)

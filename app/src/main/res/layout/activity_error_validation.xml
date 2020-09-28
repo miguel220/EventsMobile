@@ -8,30 +8,27 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="100dp"
+        android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginStart="155dp"
         android:layout_marginTop="118dp"
-        android:layout_marginEnd="156dp"
+        android:contentDescription="@string/todo"
         android:src="@drawable/negativevalidation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="197dp"
+        android:layout_width="0dp"
         android:layout_height="86dp"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="107dp"
-        android:text="@string/erro_ao_validar"
+        android:layout_marginTop="8dp"
         android:gravity="center"
+        android:text="@string/erro_ao_validar"
         android:textColor="#BB2727"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -67,7 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="114dp"
+        android:layout_marginTop="104dp"
         android:layout_marginEnd="26dp"
         android:background="@drawable/blue_btn"
         android:text="@string/ler_outro_qr_code"
@@ -75,6 +72,7 @@
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -96,6 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLerOutroQr" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLerOutroQr"
+        app:layout_constraintVertical_bias="0.416" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

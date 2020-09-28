@@ -22,7 +22,7 @@
         android:textSize="33sp"
         android:textStyle="bold" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btnVoltarHome"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -30,9 +30,12 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="30dp"
         android:layout_marginTop="75dp"
-        android:background="@drawable/ic_action_voltar"
+        android:background="#5E2BD4"
+        android:src="@drawable/ic_action_voltar"
+        android:tint="@color/colorSecundary"
         android:stateListAnimator="@null"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:longClickable="true"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

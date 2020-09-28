@@ -3,6 +3,7 @@ package com.example.events.model.Activitys;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -12,7 +13,7 @@ import com.example.events.R;
 
 public class Settings extends AppCompatActivity {
 
-    private Button btnVoltarHome;
+    private ImageButton btnVoltarHome;
     private Switch  btnMEscuro, btnNotificacoes;
 
     @Override
