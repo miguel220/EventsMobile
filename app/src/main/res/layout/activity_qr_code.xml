@@ -50,6 +50,7 @@
             android:layout_marginBottom="17dp"
             android:background="@drawable/blue_btn"
             android:text="@string/digitar_qr_code"
+            android:textStyle="bold"
             android:textColor="#fff"
             android:textSize="22sp" />
 
@@ -61,6 +62,7 @@
             android:background="#efefef"
             android:stateListAnimator="@null"
             android:text="@string/voltar"
+            android:textStyle="bold"
             android:textColor="@color/colorPrimary"
             android:textSize="22sp" />
     </LinearLayout>

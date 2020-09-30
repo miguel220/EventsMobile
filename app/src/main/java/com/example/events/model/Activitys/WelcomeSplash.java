@@ -10,7 +10,7 @@ import android.view.View;
 import com.example.events.R;
 
 public class WelcomeSplash extends AppCompatActivity {
-    private final int SPLASH_DISPLAY_LENGTH = 1500;
+    private final int SPLASH_DISPLAY_LENGTH = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
