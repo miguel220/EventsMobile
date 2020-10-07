@@ -45,7 +45,7 @@ public class Home extends AppCompatActivity {
         cardEventos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Em manutenção", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(getApplicationContext(), ListaEventosActivity.class));
             }
         });
     }

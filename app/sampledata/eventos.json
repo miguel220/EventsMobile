@@ -1,0 +1,28 @@
+{
+  "eventos": [
+    {
+      "imagem" : "@drawable/baixados",
+      "nomeEvento" : "Expotec 2020",
+      "dataEvento" : "15/08/2020",
+      "horaEvento" : "12:00 às 21:00"
+    },
+    {
+      "imagem" : "@drawable/evento2",
+      "nomeEvento" : "Palestra Dia das Mães",
+      "dataEvento" : "15/08/2020",
+      "horaEvento" : "12:00 às 21:00"
+    },
+    {
+      "imagem" : "@drawable/phoca_thumb_l_pal_foto14",
+      "nomeEvento" : "Palestra Dia dos Lindos",
+      "dataEvento" : "15/08/2020",
+      "horaEvento" : "12:00 às 21:00"
+    },
+    {
+      "imagem" : "@drawable/phoca_thumb_l_pal_foto14",
+      "nomeEvento" : "Palestra Dia dos Pegadores",
+      "dataEvento" : "15/08/2020",
+      "horaEvento" : "12:00 às 21:00"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_evento_cardview"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_margin="15dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgEventos"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@sample/eventos.json/eventos/imagem" />
+
+            <ImageView
+                android:id="@+id/imgTextos"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:background="#F0F0F0"
+                android:contentDescription="@string/todo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgEventos"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtNomeEvento"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/cabin"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/imgTextos"
+                app:layout_constraintHorizontal_bias="0.02"
+                app:layout_constraintStart_toStartOf="@id/imgTextos"
+                app:layout_constraintTop_toTopOf="@id/imgTextos"
+                tools:text="@sample/eventos.json/eventos/nomeEvento" />
+
+            <TextView
+                android:id="@+id/txtDataEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin"
+                android:textColor="#898989"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/imgTextos"
+                app:layout_constraintEnd_toEndOf="@id/imgTextos"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/txtNomeEvento"
+                app:layout_constraintTop_toTopOf="@id/imgTextos"
+                tools:text="@sample/eventos.json/eventos/dataEvento" />
+
+            <TextView
+                android:id="@+id/txtHoraEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/cabin"
+                android:textColor="#898989"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/imgTextos"
+                app:layout_constraintEnd_toEndOf="@id/imgTextos"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/txtDataEvento"
+                tools:text="@sample/eventos.json/eventos/horaEvento" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
