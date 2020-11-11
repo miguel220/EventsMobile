@@ -84,7 +84,7 @@
         android:layout_marginTop="13dp"
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="55dp"
-        android:background="#efefef"
+        android:background="@drawable/grey_btn"
         android:stateListAnimator="@null"
         android:text="@string/voltar_ao_in_cio"
         android:textColor="@color/colorPrimary"

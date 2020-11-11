@@ -111,7 +111,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="60dp"
-        android:background="#efefef"
+        android:background="@drawable/grey_btn"
         android:stateListAnimator="@null"
         android:text="Voltar ao início"
         android:textColor="@color/colorPrimary"

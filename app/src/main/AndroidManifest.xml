@@ -4,6 +4,8 @@
     package="com.example.events">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-feature android:name="android.hardware.camera2.autofocus"/>
     <uses-feature android:name="android.hardware.camera2" />
 
@@ -15,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="AllowBackup">
+        tools:ignore="AllowBackup"
+        android:usesCleartextTraffic="true">
         <activity android:name="com.example.events.model.Activitys.SucessValidation" />
         <activity android:name="com.example.events.model.Activitys.ErrorValidation" />
         <activity android:name="com.example.events.model.Activitys.Settings" />
