@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="197dp"
         android:layout_alignParentBottom="true"
-        android:background="#fff"
+        android:background="@color/colorSecundary"
         android:orientation="vertical"
         android:padding="20dp">
 
@@ -51,7 +51,7 @@
             android:background="@drawable/blue_btn"
             android:text="@string/digitar_qr_code"
             android:textStyle="bold"
-            android:textColor="#fff"
+            android:textColor="@color/colorSecundary"
             android:textSize="22sp" />
 
         <Button

@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        configuraBotaoEntrar();
+        //configuraBotaoEntrar();
     }
 
     private void configuraBotaoEntrar() {

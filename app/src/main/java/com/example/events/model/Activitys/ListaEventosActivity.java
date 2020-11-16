@@ -1,25 +1,23 @@
 package com.example.events.model.Activitys;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.events.R;
 import com.example.events.model.Evento;
-import com.example.events.model.adpter.ListaEventosAdapter;
 import com.example.events.model.dao.EventoDAO;
+import com.example.events.model.recyclerView.adapter.ListaDeEventosAdapter;
 
 import java.util.List;
 
 public class ListaEventosActivity extends AppCompatActivity {
 
-    ListView listaDePacotes;
+    RecyclerView listaDePacotes;
     ImageButton btnVtHome;
 
     @Override
@@ -42,11 +40,13 @@ public class ListaEventosActivity extends AppCompatActivity {
     }
 
     private void configuraLista() {
-        listaDePacotes = findViewById(R.id.lista_eventos_listview);
+        listaDePacotes = findViewById(R.id.lista_eventos_recyclerview);
 
         List<Evento> eventos = new EventoDAO().lista();
 
-        listaDePacotes.setAdapter(new ListaEventosAdapter(eventos, this));
+        listaDePacotes.setAdapter(new ListaDeEventosAdapter(this,eventos));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        listaDePacotes.setLayoutManager(layoutManager);
     }
 
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_grey_bkg"
+    android:background="@color/colorSecundary"
     tools:context="com.example.events.model.Activitys.LoginActivity"
     tools:ignore="ExtraText">
 
@@ -96,6 +96,7 @@
         android:layout_height="0dp"
         android:text="@string/iniciar_sess_o"
         android:textSize="22sp"
+        android:textColor="@color/greyColorText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
