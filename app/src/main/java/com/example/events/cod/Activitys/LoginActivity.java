@@ -1,4 +1,4 @@
-package com.example.events.model.Activitys;
+package com.example.events.cod.Activitys;
 
 
 import android.content.Intent;
@@ -18,7 +18,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnEntrarLogin;
     private EditText edtEmail, edtSenha;
 
-    String email_correto = "miguel@outlook.com";
+    String email_correto = "auxiliar@outlook.com";
     String senha_correta = "123456";
 
     @Override
@@ -32,14 +32,14 @@ public class LoginActivity extends AppCompatActivity {
 
 
         btnEntrarLogin = findViewById(R.id.btnEntrarLogin);
-        btnEntrarLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), WelcomeSplash.class));
-            }
-        });
+//        btnEntrarLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getApplicationContext(), WelcomeSplash.class));
+//            }
+//        });
 
-        //configuraBotaoEntrar();
+        configuraBotaoEntrar();
     }
 
     private void configuraBotaoEntrar() {
@@ -48,15 +48,12 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (TextUtils.isEmpty(edtSenha.getText().toString()) || TextUtils.isEmpty(edtEmail.getText().toString())) {
                     Toast.makeText(LoginActivity.this, "Os campos não podem ficar vazios", Toast.LENGTH_LONG).show();
-                    edtEmail.setError("Preença o campo");
-                    edtSenha.setError("Preença o campo");
                 } else if (edtEmail.getText().toString().equals(email_correto)) {
                     if (edtSenha.getText().toString().equals(senha_correta)) {
                         Toast.makeText(LoginActivity.this, "Succeful login", Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(getApplicationContext(), Home.class));
+                        startActivity(new Intent(getApplicationContext(), WelcomeSplash.class));
                     } else {
                         Toast.makeText(getApplicationContext(), "Senha incorreta", Toast.LENGTH_LONG).show();
-                        edtSenha.setError("Coloque uma senha valida");
                     }
                 } else {
                     Toast.makeText(getApplicationContext(), "Email/Senha invalidos", Toast.LENGTH_LONG).show();

@@ -1,8 +1,7 @@
-package com.example.events.model.Activitys;
+package com.example.events.cod.Activitys;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.Toast;

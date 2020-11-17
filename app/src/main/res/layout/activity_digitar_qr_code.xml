@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+<<<<<<< Updated upstream
     android:layout_height="match_parent"
     tools:context="com.example.events.model.Activitys.DigitarQrCode"
     android:background="@color/colorSecundary">
+=======
+    android:layout_height="wrap_content">
+>>>>>>> Stashed changes
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< Updated upstream
         android:layout_marginStart="74dp"
         android:layout_marginTop="192dp"
         android:layout_marginEnd="75dp"
@@ -21,25 +26,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+=======
+        tools:context="com.example.events.cod.Activitys.DigitarQrCode">
+>>>>>>> Stashed changes
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="26dp"
-        android:background="@drawable/input_theme"
-        android:ems="10"
-        android:inputType="number"
-        android:padding="12dp"
-        android:hint="@string/sharp"
-        android:textSize="26sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17"
-        android:autofillHints="" />
 
+<<<<<<< Updated upstream
     <TextView
         android:id="@+id/textView19"
         android:layout_width="360dp"
@@ -94,3 +86,92 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnConfirmarQrCode" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="192dp"
+            android:layout_marginEnd="75dp"
+            android:text="@string/digite_o_qr_code_abaixo"
+            android:textColor="#000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/txtDigitaCodigo"
+            app:layout_constraintStart_toStartOf="@id/txtDigitaCodigo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtDigitaCodigo"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="26dp"
+            android:autofillHints=""
+            android:background="@drawable/input_theme"
+            android:ems="10"
+            android:hint="@string/sharp"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="360dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="26dp"
+            android:text="@string/o_qr_code_ou_c_digo_de_inscri_o_uma_sequ_ncia_de_n_meros_que_permite_a_entrada_nos_eventos"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDigitaCodigo" />
+
+        <Button
+            android:id="@+id/btnConfirmarQrCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="142dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="11dp"
+            android:background="@drawable/blue_btn"
+            android:text="@string/confirmar"
+            android:textColor="#fff"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnVoltarParaQrCode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <Button
+            android:id="@+id/btnVoltarParaQrCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="66dp"
+            android:background="#efefef"
+            android:stateListAnimator="@null"
+            android:text="@string/voltar"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnConfirmarQrCode" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+>>>>>>> Stashed changes
