@@ -18,18 +18,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup"
-<<<<<<< Updated upstream
+
         android:usesCleartextTraffic="true">
-        <activity android:name="com.example.events.model.Activitys.SucessValidation" />
-        <activity android:name="com.example.events.model.Activitys.ErrorValidation" />
-        <activity android:name="com.example.events.model.Activitys.Settings" />
-        <activity android:name="com.example.events.model.Activitys.DigitarQrCode" />
-        <activity android:name="com.example.events.model.Activitys.WelcomeSplash" />
-        <activity android:name="com.example.events.model.Activitys.Home" />
-        <activity android:name="com.example.events.model.Activitys.ListaEventosActivity"/>
-        <activity android:name="com.example.events.model.Activitys.QrCodeActivity" />
-        <activity android:name="com.example.events.model.Activitys.SplashActivity">
-=======
+<!--        <activity android:name="com.example.events.model.Activitys.SucessValidation" />-->
+<!--        <activity android:name="com.example.events.model.Activitys.ErrorValidation" />-->
+<!--        <activity android:name="com.example.events.model.Activitys.Settings" />-->
+<!--        <activity android:name="com.example.events.model.Activitys.DigitarQrCode" />-->
+<!--        <activity android:name="com.example.events.model.Activitys.WelcomeSplash" />-->
+<!--        <activity android:name="com.example.events.model.Activitys.Home" />-->
+<!--        <activity android:name="com.example.events.model.Activitys.ListaEventosActivity"/>-->
+<!--        <activity android:name="com.example.events.model.Activitys.QrCodeActivity" />-->
+<!--        <activity android:name="com.example.events.model.Activitys.SplashActivity">-->
+
         android:name=".cod.EventsApplication">
         <activity android:name="com.example.events.cod.Activitys.SucessValidation" />
         <activity android:name="com.example.events.cod.Activitys.ErrorValidation" />
@@ -40,7 +40,6 @@
         <activity android:name="com.example.events.cod.Activitys.ListaEventosActivity"/>
         <activity android:name="com.example.events.cod.Activitys.QrCodeActivity" />
         <activity android:name="com.example.events.cod.Activitys.SplashActivity">
->>>>>>> Stashed changes
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

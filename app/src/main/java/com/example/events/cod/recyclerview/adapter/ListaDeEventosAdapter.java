@@ -1,4 +1,4 @@
-package com.example.events.model.recyclerView.adapter;
+package com.example.events.cod.recyclerview.adapter;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -13,7 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.events.R;
-import com.example.events.model.Evento;
+import com.example.events.cod.Model.Evento;
+
 
 import java.util.List;
 
@@ -40,8 +41,8 @@ public class ListaDeEventosAdapter extends RecyclerView.Adapter {
         Evento evento = eventos.get(position);
         mostraImagem(holder, evento);
         mostraNomeEvento(holder, evento);
-        mostraDataEvento(holder, R.id.txtDataEvento, evento.getData());
-        mostraHoraEvento(holder, R.id.txtHoraEvento, evento.getHora());
+        mostraDataEvento(holder, R.id.txtDataEvento, evento.getEventoData());
+        mostraHoraEvento(holder, R.id.txtHoraEvento, evento.convertHora());
     }
 
     private void mostraHoraEvento(@NonNull RecyclerView.ViewHolder holder, int p, String hora) {

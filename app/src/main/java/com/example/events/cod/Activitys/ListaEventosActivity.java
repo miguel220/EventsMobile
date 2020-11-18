@@ -11,9 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.events.R;
 import com.example.events.cod.Model.Evento;
 import com.example.events.cod.dao.EventoDAO;
-import com.example.events.cod.database.EventsDatabase;
-import com.example.events.cod.database.dao.RoomEventoDAO;
 import com.example.events.cod.recyclerview.adapter.ListaDeEventosAdapter;
+
 
 import java.util.List;
 
