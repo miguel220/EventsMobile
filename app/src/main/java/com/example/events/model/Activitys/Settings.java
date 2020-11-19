@@ -14,7 +14,7 @@ import com.example.events.R;
 public class Settings extends AppCompatActivity {
 
     private ImageButton btnVoltarHome;
-    private Switch  btnMEscuro, btnNotificacoes;
+    private Switch  btnMEscuro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +23,6 @@ public class Settings extends AppCompatActivity {
 
         btnVoltarHome = findViewById(R.id.btnVoltarHome);
         btnMEscuro = findViewById(R.id.btnMEscuro);
-        btnNotificacoes = (Switch) findViewById(R.id.btnNotificacoes);
-
-        btnNotificacao();
 
         btnModoEscuro();
 
@@ -33,26 +30,25 @@ public class Settings extends AppCompatActivity {
 
     }
 
-    private void btnNotificacao() {
-        btnNotificacoes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(btnNotificacoes.isChecked()){
-                    Toast.makeText(getApplicationContext(), "Em manutenção", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
-
     private void btnModoEscuro() {
         btnMEscuro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(btnMEscuro.isChecked()){
-                    Toast.makeText(getApplicationContext(), "Em manutenção", Toast.LENGTH_SHORT).show();
+                    modoEscuro();
+                } else {
+                    modoBranco();
                 }
             }
         });
+    }
+
+    private void modoBranco() {
+        Toast.makeText(getApplicationContext(), "Modo branco", Toast.LENGTH_SHORT).show();
+    }
+
+    private void modoEscuro(){
+        Toast.makeText(getApplicationContext(), "Modo escuro", Toast.LENGTH_SHORT).show();
     }
 
     private void btnVoltarHome() {
