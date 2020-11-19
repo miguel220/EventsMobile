@@ -6,8 +6,8 @@ public class Adm3 {
 
     public Adm3()
     {
-        this.edtEmail = "miguel@hotmail.com";
-        this.edtSenha = "Miguel@123";
+        this.edtEmail = "a";
+        this.edtSenha = "a";
     }
 
     public String getEdtEmail()

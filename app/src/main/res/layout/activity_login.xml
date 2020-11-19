@@ -69,6 +69,7 @@
                 android:layout_marginBottom="0dp"
                 android:hint="@string/seu_e_mail"
                 android:inputType="textEmailAddress"
+                android:maxLength="35"
                 android:paddingStart="15dp"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -85,6 +86,7 @@
                 android:layout_height="65dp"
                 android:hint="@string/sua_senha"
                 android:inputType="textPassword"
+                android:maxLength="20"
                 android:paddingStart="15dp"
                 android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
