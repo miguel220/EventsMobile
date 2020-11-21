@@ -29,8 +29,6 @@ public class Settings extends AppCompatActivity {
 
         btnModoEscuro();
 
-        btnVoltarHome();
-
     }
 
     private void btnNotificacao() {
