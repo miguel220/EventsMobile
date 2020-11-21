@@ -1,111 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context="com.example.events.model.Activitys.Settings">
+    android:layout_height="wrap_content">
 
-
-    <TextView
-        android:layout_width="225dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="83dp"
-        android:layout_marginEnd="54dp"
-        android:text="@string/preferencias"
-        android:textColor="@color/colorSecundary"
-        android:textSize="33sp"
-        android:textStyle="bold" />
-
-    <ImageButton
-        android:id="@+id/btnVoltarHome"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="75dp"
-        android:background="#5E2BD4"
-        android:src="@drawable/ic_action_voltar"
-        android:tint="@color/colorSecundary"
-        android:stateListAnimator="@null"
-        android:clickable="true"
-        android:longClickable="true"/>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/rounded_border_screen"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        tools:context="com.example.events.cod.Activitys.Settings">
 
-
-        >
-
-        <Switch
-            android:id="@+id/btnMEscuro"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginBottom="58dp"
-            android:checked="false"
-            android:fontFamily="@font/cabin"
-            android:gravity="center"
-            android:switchPadding="100dp"
-            android:text="@string/modo_escuro"
-            android:textColor="@color/greyColorText"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:thumb="@drawable/sw_thub"
-            android:track="@drawable/sw_track"
-            app:layout_constraintBottom_toTopOf="@+id/btnNotificacoes"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.463"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-        <Switch
-            android:id="@+id/btnNotificacoes"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginTop="52dp"
-            android:checked="false"
-            android:fontFamily="@font/cabin"
-            android:gravity="center"
-            android:switchPadding="30dp"
-            android:text="@string/ativar_notifica_es"
-            android:textColor="@color/greyColorText"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:thumb="@drawable/sw_thub"
-            android:track="@drawable/sw_track"
-            app:layout_constraintStart_toStartOf="@id/btnMEscuro"
-            app:layout_constraintTop_toBottomOf="@+id/btnMEscuro"
-            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
         <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginTop="265dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="60dp"
-            android:fontFamily="@font/cabin"
-            android:text="@string/events_gest_o_de_eventos_escolares"
-            android:textAlignment="center"
-            android:textColor="@color/greyColorText"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/btnNotificacoes"
-            app:layout_constraintTop_toBottomOf="@+id/btnNotificacoes" />
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="83dp"
+            android:layout_marginEnd="54dp"
+            android:text="@string/preferencias"
+            android:textColor="@color/colorSecundary"
+            android:textSize="33sp"
+            android:textStyle="bold" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/btnVoltarHome"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="75dp"
+            android:background="#5E2BD4"
+            android:clickable="true"
+            android:longClickable="true"
+            android:src="@drawable/ic_action_voltar"
+            android:stateListAnimator="@null"
+            android:tint="@color/colorSecundary" />
 
-</RelativeLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/rounded_border_screen"
+
+
+            >
+
+            <Switch
+                android:id="@+id/btnMEscuro"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="32dp"
+                android:checked="false"
+                android:fontFamily="@font/cabin"
+                android:gravity="center"
+                android:switchPadding="100dp"
+                android:text="@string/modo_escuro"
+                android:textColor="@color/greyColorText"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:thumb="@drawable/sw_thub"
+                android:track="@drawable/sw_track"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.463"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="385dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginBottom="44dp"
+                android:fontFamily="@font/cabin"
+                android:text="@string/events_gest_o_de_eventos_escolares"
+                android:textAlignment="center"
+                android:textColor="@color/greyColorText"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnMEscuro" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -20,22 +20,23 @@
         android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup">
         <activity android:name=".AboutUs"></activity>
-        <activity android:name=".model.Activitys.SucessValidation" />
-        <activity android:name=".model.Activitys.ErrorValidation" />
-        <activity android:name=".model.Activitys.Settings" />
-        <activity android:name=".model.Activitys.DigitarQrCode" />
-        <activity android:name=".model.Activitys.WelcomeSplash" />
-        <activity android:name=".model.Activitys.Home" />
-        <activity android:name=".model.Activitys.ListaEventosActivity" />
-        <activity android:name=".model.Activitys.QrCodeActivity" />
-        <activity android:name=".model.Activitys.SplashActivity">
+        <activity android:name="com.example.events.cod.Activitys.SucessValidation" />
+        <activity android:name="com.example.events.cod.Activitys.ErrorValidation" />
+        <activity android:name="com.example.events.cod.Activitys.Settings" />
+        <activity android:name="com.example.events.cod.Activitys.DigitarQrCode" />
+        <activity android:name="com.example.events.cod.Activitys.WelcomeSplash" />
+        <activity android:name="com.example.events.cod.Activitys.Home" />
+        <activity android:name="com.example.events.cod.Activitys.ListaEventosActivity"/>
+        <activity android:name="com.example.events.cod.Activitys.QrCodeActivity" />
+        <activity android:name="com.example.events.cod.Activitys.SplashActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".model.Activitys.LoginActivity" />
+        <activity android:name="com.example.events.cod.Activitys.LoginActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
