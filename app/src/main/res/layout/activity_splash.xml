@@ -4,12 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< Updated upstream
     android:background="@color/colorSecundary"
-    tools:context="com.example.events.model.Activitys.SplashActivity">
-=======
     tools:context="com.example.events.cod.Activitys.SplashActivity">
->>>>>>> Stashed changes
 
     <ImageView
         android:layout_width="240dp"

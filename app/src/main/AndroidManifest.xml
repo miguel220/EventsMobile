@@ -18,7 +18,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup"
-
         android:usesCleartextTraffic="true">
 <!--        <activity android:name="com.example.events.model.Activitys.SucessValidation" />-->
 <!--        <activity android:name="com.example.events.model.Activitys.ErrorValidation" />-->
@@ -30,7 +29,6 @@
 <!--        <activity android:name="com.example.events.model.Activitys.QrCodeActivity" />-->
 <!--        <activity android:name="com.example.events.model.Activitys.SplashActivity">-->
 
-        android:name=".cod.EventsApplication">
         <activity android:name="com.example.events.cod.Activitys.SucessValidation" />
         <activity android:name="com.example.events.cod.Activitys.ErrorValidation" />
         <activity android:name="com.example.events.cod.Activitys.Settings" />
