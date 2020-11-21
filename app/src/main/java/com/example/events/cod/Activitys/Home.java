@@ -11,7 +11,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.events.AboutUs;
 import com.example.events.R;
 
 public class Home extends AppCompatActivity {

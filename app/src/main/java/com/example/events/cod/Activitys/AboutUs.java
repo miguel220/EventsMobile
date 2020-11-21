@@ -1,4 +1,4 @@
-package com.example.events;
+package com.example.events.cod.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.events.R;
 import com.example.events.cod.Activitys.Home;
 
 public class AboutUs extends AppCompatActivity {
