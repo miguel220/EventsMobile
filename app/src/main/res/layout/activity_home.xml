@@ -37,8 +37,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="200dp"
             android:background="@drawable/rounded_border_screen"
-            android:orientation="vertical"
             android:divider="@null"
+            android:orientation="vertical"
             android:showDividers="none"
             android:weightSum="4">
 
