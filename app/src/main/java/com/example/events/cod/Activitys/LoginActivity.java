@@ -48,6 +48,9 @@ public class LoginActivity extends AppCompatActivity {
                 } else if (!(edtEmail.getText().toString().toLowerCase().contains(".com"))){
                     Toast.makeText(getApplicationContext(), "Não é um email válido", Toast.LENGTH_SHORT).show();
                     edtEmail.setBackgroundResource(R.drawable.error_input);
+                } else if (!(edtEmail.getText().toString().equalsIgnoreCase(email_correto))){
+                    Toast.makeText(getApplicationContext(), "Não é um email cadastrado", Toast.LENGTH_SHORT).show();
+                    edtEmail.setBackgroundResource(R.drawable.error_input);
                 } else if (edtEmail.getText().toString().equalsIgnoreCase(email_correto)) {
                     edtEmail.setBackgroundResource(R.drawable.empty);
                     if (edtSenha.getText().toString().equals(senha_correta)) {
