@@ -5,38 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="com.example.events.model.Activitys.WelcomeSplash">
+    tools:context="com.example.events.cod.Activitys.WelcomeSplash">
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/txtBemVindo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="340dp"
         android:layout_marginEnd="144dp"
+        android:layout_marginBottom="346dp"
         android:text="@string/bem_vindo"
         android:textColor="@color/colorSecundary"
-        android:textSize="26sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="386dp"
-        android:layout_height="92dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="116dp"
-        android:layout_marginBottom="387dp"
-        android:text="João Silva"
-        android:gravity="center"
-        android:textColor="@color/colorSecundary"
-        android:textSize="44sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

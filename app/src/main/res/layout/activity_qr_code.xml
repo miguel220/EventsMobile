@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorhint"
+    android:background="@color/colorHint"
     android:gravity="center">
 
     <FrameLayout
@@ -51,7 +51,7 @@
             android:background="@drawable/blue_btn"
             android:text="@string/digitar_qr_code"
             android:textStyle="bold"
-            android:textColor="@color/colorSecundary"
+            android:textColor="@color/colorTextBtn"
             android:textSize="22sp" />
 
         <Button

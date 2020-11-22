@@ -1,0 +1,9 @@
+{
+  "usuarios": [
+    {
+      "edtEmail" : "miguel@gmail.com",
+      "edtSenha" : "Senha123",
+      "nomeUsuario" : "Miguel Batista"
+    }
+  ]
+}

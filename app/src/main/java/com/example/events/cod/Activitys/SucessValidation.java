@@ -1,30 +1,31 @@
-package com.example.events.model.Activitys;
+package com.example.events.cod.Activitys;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.events.R;
 
-public class ErrorValidation extends AppCompatActivity {
-
+public class SucessValidation extends AppCompatActivity {
 
     Button btnLerOutroQr, btnVoltarInicio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_error_validation);
+        setContentView(R.layout.activity_sucess_validation);
 
         btnLerOutroQr = findViewById(R.id.btnLerOutroQr);
         btnVoltarInicio = findViewById(R.id.btnVoltarInicio);
 
-        btnVoltarInicio();
 
         btnLerOutroQr();
+
+        btnVoltarInicio();
+
     }
 
     private void btnVoltarInicio() {
@@ -44,4 +45,6 @@ public class ErrorValidation extends AppCompatActivity {
             }
         });
     }
+
+
 }

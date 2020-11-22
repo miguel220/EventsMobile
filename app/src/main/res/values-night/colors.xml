@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#441f98</color>
+    <color name="colorSecundary">#252a3a</color>
+    <color name="colorHint">#C0C0C0</color>
+    <color name="colorTextOne">#fff</color>
+    <color name="colorTextTwo">#cecece</color>
+    <color name="colorTextThree">#c0c0c0</color>
+    <color name="colorTextFour">#bcbcbc</color>
+    <color name="colorTextBtn">#dedede</color>
+</resources>

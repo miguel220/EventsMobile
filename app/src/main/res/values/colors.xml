@@ -2,9 +2,10 @@
 <resources>
     <color name="colorPrimary">#6930ee</color>
     <color name="colorSecundary">#fff</color>
-    <color name="colorDarkSecundary">#292a2e</color>
-    <color name="colorhint">#C0C0C0</color>
-    <color name="blackColorText">#000</color>
-    <color name="greyColorText">#898989</color>
-
+    <color name="colorHint">#C0C0C0</color>
+    <color name="colorTextOne">#000</color>
+    <color name="colorTextTwo">#898989</color>
+    <color name="colorTextThree">#4a4a4a</color>
+    <color name="colorTextFour">#303030</color>
+    <color name="colorTextBtn">#fff</color>
 </resources>
