@@ -24,7 +24,6 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-
         cardsButtons();
 
         cardSair();
@@ -38,7 +37,6 @@ public class Home extends AppCompatActivity {
         cardFecharPrograma();
 
         cardButtonEventos();
-
 
     }
 
@@ -74,7 +72,7 @@ public class Home extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 finishAndRemoveTask();
                                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                             }
                         })
@@ -104,7 +102,7 @@ public class Home extends AppCompatActivity {
         });
     }
 
-    private void cardSobre(){
+    private void cardSobre() {
         cardSobre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,7 +112,7 @@ public class Home extends AppCompatActivity {
         });
     }
 
-    private void cardFecharPrograma(){
+    private void cardFecharPrograma() {
         cardFecharPrograma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

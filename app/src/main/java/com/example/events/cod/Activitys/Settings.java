@@ -25,12 +25,7 @@ public class Settings extends AppCompatActivity {
         btnVoltarHome = findViewById(R.id.btnVoltarHome);
         btnMEscuro = findViewById(R.id.btnMEscuro);
 
-        btnVoltarHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        configBotaoVoltar();
 
         SharedPreferences appSettingPrefs = getSharedPreferences( "AppSettingPrefs", 0);
         SharedPreferences.Editor sharedPrefsEdit = appSettingPrefs.edit();
@@ -44,25 +39,38 @@ public class Settings extends AppCompatActivity {
             btnMEscuro.setText("Aplicar modo escuro");
         }
 
+        configBotaoModoEscuro(sharedPrefsEdit, isNightModeOn);
+    }
+
+    private void configBotaoModoEscuro(SharedPreferences.Editor sharedPrefsEdit, Boolean isNightModeOn) {
         btnMEscuro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isNightModeOn) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                     sharedPrefsEdit.putBoolean("NightMode", false);
                     sharedPrefsEdit.apply();
 
-                    btnMEscuro.setText("Aplicar modo escuro");
+                    btnMEscuro.setText("Aplicar modo claro");
                 } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                     sharedPrefsEdit.putBoolean("NightMode", true);
                     sharedPrefsEdit.apply();
 
-                    btnMEscuro.setText("Aplicar modo claro");
+                    btnMEscuro.setText("Aplicar modo escuro");
                 }
 
             }
 
+        });
+    }
+
+    private void configBotaoVoltar() {
+        btnVoltarHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
         });
     }
 }

@@ -12,20 +12,16 @@
         android:background="@color/colorSecundary"
         tools:context="com.example.events.cod.Activitys.DigitarQrCode">
 
-
         <TextView
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="74dp"
             android:layout_marginTop="192dp"
-            android:layout_marginEnd="75dp"
             android:text="@string/digite_o_qr_code_abaixo"
             android:textColor="@color/colorTextOne"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
@@ -102,4 +98,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnConfirmarQrCode" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

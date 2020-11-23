@@ -58,10 +58,10 @@ public class LoginActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), WelcomeSplash.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
-                    } else if (edtSenha.getText().toString()==""){
+                    } else if (edtSenha.getText().toString().equals("")){
                         Toast.makeText(getApplicationContext(), "Preencha a senha", Toast.LENGTH_SHORT).show();
                         edtSenha.setBackgroundResource(R.drawable.error_input);
-                    } else if ((edtSenha.getText().toString())!=(senha_correta)){
+                    } else if ((edtSenha.getText().toString()) != (senha_correta)){
                         Toast.makeText(getApplicationContext(), "Senha incorreta", Toast.LENGTH_SHORT).show();
                         edtSenha.setBackgroundResource(R.drawable.error_input);
                     } else {

@@ -18,46 +18,46 @@ import com.example.events.cod.Model.Evento;
 
 import java.util.List;
 
-public class ListaDeEventosAdapter extends RecyclerView.Adapter {
+public class ListaDeEventosAdapter extends RecyclerView.Adapter<ListaDeEventosAdapter.EventoViewHolder> {
 
     public static final String DRAWABLE = "drawable";
     private List<Evento> eventos;
     private Context context;
 
-    public ListaDeEventosAdapter( Context context, List<Evento> eventos){
+    public ListaDeEventosAdapter(Context context, List<Evento> eventos) {
         this.context = context;
         this.eventos = eventos;
     }
 
+    static class EventoViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView horaEvento;
+        public TextView dataEvento;
+        public TextView nomeEvento;
+
+        public EventoViewHolder(@NonNull View itemView) {
+            super(itemView);
+            horaEvento = itemView.findViewById(R.id.txtHoraEvento);
+            dataEvento = itemView.findViewById(R.id.txtDataEvento);
+            nomeEvento = itemView.findViewById(R.id.txtNomeEvento);
+        }
+    }
+
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public EventoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View viewCriada = LayoutInflater.from(context).inflate(R.layout.item_lista_eventos, parent, false);
         return new EventoViewHolder(viewCriada);
     }
 
+
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull EventoViewHolder holder, int position) {
         Evento evento = eventos.get(position);
         mostraImagem(holder, evento);
-        mostraNomeEvento(holder, evento);
-        mostraDataEvento(holder, R.id.txtDataEvento, evento.getEventoData());
-        mostraHoraEvento(holder, R.id.txtHoraEvento, evento.convertHora());
-    }
-
-    private void mostraHoraEvento(@NonNull RecyclerView.ViewHolder holder, int p, String hora) {
-        TextView horaEvento = holder.itemView.findViewById(p);
-        horaEvento.setText(hora);
-    }
-
-    private void mostraDataEvento(@NonNull RecyclerView.ViewHolder holder, int p, String data) {
-        TextView dataEvento = holder.itemView.findViewById(p);
-        dataEvento.setText(data);
-    }
-
-    private void mostraNomeEvento(@NonNull RecyclerView.ViewHolder holder, Evento evento) {
-        TextView nomeEvento = holder.itemView.findViewById(R.id.txtNomeEvento);
-        nomeEvento.setText(evento.getNomeEvento());
+        holder.horaEvento.setText(evento.convertHora());
+        holder.dataEvento.setText(evento.getEventoData());
+        holder.nomeEvento.setText(evento.getNomeEvento());
     }
 
     private void mostraImagem(@NonNull RecyclerView.ViewHolder holder, Evento evento) {
@@ -77,10 +77,5 @@ public class ListaDeEventosAdapter extends RecyclerView.Adapter {
         return eventos.size();
     }
 
-    static class  EventoViewHolder extends RecyclerView.ViewHolder{
 
-        public EventoViewHolder(@NonNull View itemView) {
-            super(itemView);
-        }
-    }
 }
