@@ -51,12 +51,10 @@ public class Settings extends AppCompatActivity {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                     sharedPrefsEdit.putBoolean("NightMode", false);
                     sharedPrefsEdit.apply();
-                    btnMEscuro.setText("Aplicar modo escuro");
                 } else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                     sharedPrefsEdit.putBoolean("NightMode", true);
                     sharedPrefsEdit.apply();
-                    btnMEscuro.setText("Aplicar modo claro");
                 }
 
             }
