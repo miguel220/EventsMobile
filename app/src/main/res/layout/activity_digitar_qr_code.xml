@@ -12,7 +12,6 @@
         android:background="@color/colorSecundary"
         tools:context="com.example.events.cod.Activitys.DigitarQrCode">
 
-
         <TextView
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
@@ -38,6 +37,7 @@
             android:autofillHints=""
             android:background="@drawable/input_theme"
             android:ems="10"
+            android:maxLength="15"
             android:hint="@string/sharp"
             android:inputType="number"
             android:padding="12dp"
