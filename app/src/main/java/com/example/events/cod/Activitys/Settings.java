@@ -51,7 +51,7 @@ public class Settings extends AppCompatActivity {
                 if (isNightModeOn) {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                     sharedPrefsEdit.putBoolean("NightMode", false);
-                    sharedPrefsEdit.commit();
+                    sharedPrefsEdit.apply();
                 } else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                     sharedPrefsEdit.putBoolean("NightMode", true);
