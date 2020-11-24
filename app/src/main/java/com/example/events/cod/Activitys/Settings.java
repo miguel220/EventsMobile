@@ -1,5 +1,6 @@
 package com.example.events.cod.Activitys;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -27,7 +28,7 @@ public class Settings extends AppCompatActivity {
 
         configBotaoVoltar();
 
-        SharedPreferences appSettingPrefs = getSharedPreferences( "AppSettingPrefs", 0);
+        SharedPreferences appSettingPrefs = getApplicationContext().getSharedPreferences( "AppSettingPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor sharedPrefsEdit = appSettingPrefs.edit();
         Boolean isNightModeOn = appSettingPrefs.getBoolean("NightMode",false);
 
@@ -52,12 +53,14 @@ public class Settings extends AppCompatActivity {
                     sharedPrefsEdit.apply();
 
                     btnMEscuro.setText("Aplicar modo claro");
+                    sharedPrefsEdit.commit();
                 } else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                     sharedPrefsEdit.putBoolean("NightMode", true);
                     sharedPrefsEdit.apply();
 
                     btnMEscuro.setText("Aplicar modo escuro");
+                    sharedPrefsEdit.commit();
                 }
 
             }

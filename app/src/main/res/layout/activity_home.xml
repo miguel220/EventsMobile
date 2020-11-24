@@ -84,7 +84,7 @@
                             android:fontFamily="@font/cabin"
                             android:gravity="center"
                             android:text="@string/eventos"
-                            android:textColor="@color/colorSecundary"
+                            android:textColor="#fff"
                             android:textSize="18sp" />
 
                     </LinearLayout>
@@ -124,7 +124,7 @@
                             android:fontFamily="@font/cabin"
                             android:gravity="center"
                             android:text="@string/qr_code"
-                            android:textColor="@color/colorSecundary"
+                            android:textColor="#fff"
                             android:textSize="18sp" />
 
                     </LinearLayout>
@@ -164,7 +164,7 @@
                             android:fontFamily="@font/cabin"
                             android:gravity="center"
                             android:text="@string/preferencias"
-                            android:textColor="@color/colorSecundary"
+                            android:textColor="#fff"
                             android:textSize="18sp" />
 
                     </LinearLayout>
@@ -205,7 +205,7 @@
                             android:fontFamily="@font/cabin"
                             android:gravity="center"
                             android:text="@string/sobre"
-                            android:textColor="@color/colorSecundary"
+                            android:textColor="#fff"
                             android:textSize="18sp" />
 
                     </LinearLayout>
@@ -246,7 +246,7 @@
                             android:fontFamily="@font/cabin"
                             android:gravity="center"
                             android:text="@string/sair"
-                            android:textColor="@color/colorSecundary"
+                            android:textColor="#fff"
                             android:textSize="18sp" />
 
                     </LinearLayout>
@@ -286,7 +286,7 @@
                             android:fontFamily="@font/cabin"
                             android:gravity="center"
                             android:text="@string/fecharPrograma"
-                            android:textColor="@color/colorSecundary"
+                            android:textColor="#fff"
                             android:textSize="18sp" />
 
                     </LinearLayout>
